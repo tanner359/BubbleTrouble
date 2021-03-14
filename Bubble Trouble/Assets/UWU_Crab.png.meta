@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: 68d2c3c43849c7248b6e4b7398e3f652
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4909529494425672656
+    second: L_Claw
+  - first:
+      213: 7224674041666520510
+    second: R_Claw
+  - first:
+      213: 6105406112881262718
+    second: L_Front_Leg
+  - first:
+      213: 6849332037365008204
+    second: Body
+  - first:
+      213: 8584129969569683134
+    second: R_Front_Leg
+  - first:
+      213: 6209281826448342235
+    second: L_Middle_Leg
+  - first:
+      213: 8477349408582308500
+    second: R_Middle_Leg
+  - first:
+      213: -6350029108633955963
+    second: L_Back_Leg
+  - first:
+      213: -5683920775519162445
+    second: R_Back_Leg
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: L_Claw
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1277
+        width: 686
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.67605376, y: 0.089772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0346476cfe8dddbb0800000000000000
+      internalID: -4909529494425672656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Claw
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 1314
+        width: 726
+        height: 1140
+      alignment: 9
+      pivot: {x: 0.21266112, y: 0.10994381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5c48f43c2334460800000000000000
+      internalID: 7224674041666520510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Front_Leg
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 858
+        width: 506
+        height: 328
+      alignment: 9
+      pivot: {x: 0.94481575, y: 0.7845258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7049c70382cab450800000000000000
+      internalID: 6105406112881262718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 294
+        width: 1031
+        height: 899
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4708dbd237bd0f50800000000000000
+      internalID: 6849332037365008204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Front_Leg
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 926
+        width: 613
+        height: 276
+      alignment: 9
+      pivot: {x: 0.025362348, y: 0.7784618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb65cf50ab4f02770800000000000000
+      internalID: 8584129969569683134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Middle_Leg
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 457
+        width: 461
+        height: 292
+      alignment: 9
+      pivot: {x: 0.9525115, y: 0.8572049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcfdb74ceccb2650800000000000000
+      internalID: 6209281826448342235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Middle_Leg
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 491
+        width: 497
+        height: 291
+      alignment: 9
+      pivot: {x: 0.025037678, y: 0.83956754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4929a674f5895a570800000000000000
+      internalID: 8477349408582308500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Back_Leg
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 68
+        width: 328
+        height: 329
+      alignment: 9
+      pivot: {x: 0.95189404, y: 0.8837769}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5819b7a6b2a20e7a0800000000000000
+      internalID: -6350029108633955963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Back_Leg
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 88
+        width: 413
+        height: 264
+      alignment: 9
+      pivot: {x: 0.0347726, y: 0.91588455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfa7bb5b28ae11b0800000000000000
+      internalID: -5683920775519162445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6b285132a6cc60b409a534757b7bc79a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
