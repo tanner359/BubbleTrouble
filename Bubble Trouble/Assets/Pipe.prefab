@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1660989883464513062}
   - component: {fileID: 2730000136633445449}
   - component: {fileID: 5106555797336948275}
+  - component: {fileID: 4825385399143816244}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Untagged
@@ -103,6 +104,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4825385399143816244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000792012611104427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4d47e579b8b8943906eeb270d85836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5106555797336948275}
+  spawnPoint: {fileID: 467191164727871353}
+  bubblePrefab: {fileID: 3304560656613917307, guid: 31eff86ecefa5ca4e90aac3ccbdc13ee, type: 3}
+  spawnDelay: 2
+  shootForce: 6
 --- !u!1 &8139961952605171107
 GameObject:
   m_ObjectHideFlags: 0
