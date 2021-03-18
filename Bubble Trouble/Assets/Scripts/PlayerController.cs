@@ -7,18 +7,26 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     Vector3 touchPosition;
+    public float movementSpeed;
 
-    
 
+    Vector3 tilt;
+    Touch touch;
     private void FixedUpdate()
     {
-        if(moveDirection == 1)
+        // tilt stuff  
+        tilt = Input.acceleration;
+        Debug.Log(tilt);
+        Walk(tilt.x);
+        if (Input.touchCount > 0)
         {
-            rb.MovePosition(transform.position + Vector3.right);
-        }
-        else if(moveDirection == -1)
-        {
-            rb.MovePosition(transform.position + Vector3.left);
+            touch = Input.GetTouch(0);
+            switch(touch.phase)
+            {
+                case TouchPhase.Began :
+                    Swing();
+                    break;
+            }
         }
     }
 
@@ -39,26 +47,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    int moveDirection = 0;
-    public void MoveButtonDown(int direction)
+    public void Walk(float direction)
     {
-        if (direction == -1)
+        if (direction <= -0.25f)
         {
-            moveDirection = -1;
             animator.SetBool("Walk", true);
+            rb.velocity = Vector2.left * movementSpeed;
         }
-        else if (direction == 1)
+        else if (direction >= 0.25f)
         {
-            moveDirection = 1;
             animator.SetBool("Walk", true);
+            rb.velocity = Vector2.right * movementSpeed;
         }
-    }
-
-    public void MoveButtonUp()
-    {
-        moveDirection = 0;
-        rb.velocity = Vector2.zero;
-        animator.SetBool("Walk", false);
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
