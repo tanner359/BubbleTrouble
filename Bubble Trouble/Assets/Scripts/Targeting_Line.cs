@@ -20,13 +20,16 @@ public class Targeting_Line : MonoBehaviour
     {            
         if (collision.CompareTag("Bubble") && !collision.GetComponent<Bubble>().WasBubbleHit())
         {
+            lineRend.enabled = true;
             Vector2 direction = -(transform.position - collision.transform.position).normalized;
             lineStart = collision.transform.position;
             lineEnd = (Vector2)collision.transform.position + (direction * lineDistance);
             lineRend.SetPosition(0, lineStart);
             lineRend.SetPosition(1, lineEnd);
         }
+        else
+        {
+            lineRend.enabled = false;
+        }
     }
-
-   
 }

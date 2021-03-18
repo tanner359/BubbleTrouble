@@ -9,6 +9,7 @@ public class Pipe : MonoBehaviour
     public GameObject bubblePrefab;
     public float spawnDelay;
     public float shootForce;
+    public float bubbleLifeTime = 10;
 
 
 
@@ -23,7 +24,7 @@ public class Pipe : MonoBehaviour
     {
         GameObject bubble = Instantiate(bubblePrefab, spawnPoint.position, new Quaternion(0,0,90,0));
         bubble.GetComponent<Rigidbody2D>().AddForce(-gameObject.transform.right * shootForce, ForceMode2D.Impulse);       
-        Destroy(bubble, 20);
+        Destroy(bubble, bubbleLifeTime);
     }
 
 

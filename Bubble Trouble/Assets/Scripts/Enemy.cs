@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Bubble"))
         {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
