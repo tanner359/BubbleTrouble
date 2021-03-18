@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-    Vector3 touchPosition;
     public float movementSpeed;
 
 
@@ -16,16 +15,18 @@ public class PlayerController : MonoBehaviour
     {
         // tilt stuff  
         tilt = Input.acceleration;
-        Debug.Log(tilt);
         Walk(tilt.x);
         
     }
 
+    Vector2 touchPos;
     private void Update()
     {
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
+            Vector3 touchPoint = new Vector3(touch.position.x, touch.position.y, -Camera.main.transform.position.z);
+            touchPos = Camera.main.ScreenToWorldPoint(touchPoint);
             switch (touch.phase)
             {
                 default:
@@ -40,17 +41,13 @@ public class PlayerController : MonoBehaviour
 
     public void Swing()
     {
-        if(gameObject.transform.position.x > 0)
+        if(touchPos.x >= 0)
         {
             animator.SetTrigger("SwingRight");
         }
-        else if(gameObject.transform.position.x < 0)
+        else if(touchPos.x < 0)
         {
             animator.SetTrigger("SwingLeft");
-        }
-        else
-        {
-            animator.SetTrigger("SwingRight");
         }
     }
 
