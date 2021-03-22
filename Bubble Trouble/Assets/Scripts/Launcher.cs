@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Launcher : MonoBehaviour
 {
+    [SerializeField] public GameObject gameOverMenu;
 
     public void LoadLevel(int level)
     {
@@ -36,5 +37,11 @@ public class Launcher : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+
+    public void GameOver()
+    {
+        OpenMenu(gameOverMenu);
+        //gameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
     }
 }

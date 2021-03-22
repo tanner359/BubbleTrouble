@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 44e3174e4eb735f4988db8c440ac4b34
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4169969342973317360
+    second: Left_Claw
+  - first:
+      213: -7083543252892426408
+    second: Right_Claw
+  - first:
+      213: -6776594348874989403
+    second: Body
+  - first:
+      213: -7059252792041351444
+    second: Front_Left_Leg
+  - first:
+      213: -7006333872565062535
+    second: Back_Left_Leg
+  - first:
+      213: -4948959495188777265
+    second: MIddle_Right_Leg
+  - first:
+      213: 7985324811041311033
+    second: Front_Right_Leg
+  - first:
+      213: 3335655400641867273
+    second: Middle_Left_Leg
+  - first:
+      213: 5834778718957273836
+    second: Back_Right_Leg
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,11 +152,200 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Left_Claw
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1933
+        width: 704
+        height: 1404
+      alignment: 9
+      pivot: {x: 0.90392804, y: 0.06755079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f091342605bed930800000000000000
+      internalID: 4169969342973317360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right_Claw
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1933
+        width: 811
+        height: 1404
+      alignment: 9
+      pivot: {x: 0.0735509, y: 0.07849886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f5b3411f232bd90800000000000000
+      internalID: -7083543252892426408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 2098
+        width: 1197
+        height: 1075
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a00368f753b4f1a0800000000000000
+      internalID: -6776594348874989403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Left_Leg
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1113
+        width: 466
+        height: 406
+      alignment: 9
+      pivot: {x: 0.9782846, y: 0.53785986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6d0b6bcfe780e90800000000000000
+      internalID: -7059252792041351444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Left_Leg
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 1043
+        width: 321
+        height: 543
+      alignment: 9
+      pivot: {x: 0.9309656, y: 0.89630836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974f8fbc67084ce90800000000000000
+      internalID: -7006333872565062535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MIddle_Right_Leg
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 900
+        width: 430
+        height: 686
+      alignment: 9
+      pivot: {x: 0.07103811, y: 0.9033232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6f9715f83c15bb0800000000000000
+      internalID: -4948959495188777265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Right_Leg
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 1110
+        width: 465
+        height: 408
+      alignment: 9
+      pivot: {x: 0.037213333, y: 0.650697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9390b3a8b9291de60800000000000000
+      internalID: 7985324811041311033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Middle_Left_Leg
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 174
+        width: 445
+        height: 661
+      alignment: 9
+      pivot: {x: 0.96631396, y: 0.9069505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e2f50f9e0aa4e20800000000000000
+      internalID: 3335655400641867273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Right_Leg
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 174
+        width: 324
+        height: 537
+      alignment: 9
+      pivot: {x: 0.262791, y: 0.9293604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce20576b45c49f050800000000000000
+      internalID: 5834778718957273836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a323dd1736b576945b4fe1534ead23b9
     internalID: 0
     vertices: []
     indices: 

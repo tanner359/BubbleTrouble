@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: d6476b2736d1f954fa70a2b750f75249
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1338752957676379874
+    second: AngryFish2Pieces_0
+  - first:
+      213: -7434532600883127667
+    second: AngryFish2Pieces_1
+  - first:
+      213: -376816333300598705
+    second: AngryFish2Pieces_2
+  - first:
+      213: 964137940760535148
+    second: AngryFish2Pieces_3
+  - first:
+      213: -1804394431694799528
+    second: AngryFish2Pieces_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,11 +140,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AngryFish2Pieces_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2363
+        width: 728
+        height: 524
+      alignment: 9
+      pivot: {x: 0.4638044, y: 0.3239951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eedd44d8b4349210800000000000000
+      internalID: 1338752957676379874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFish2Pieces_1
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 2139
+        width: 333
+        height: 748
+      alignment: 9
+      pivot: {x: 0.025216134, y: 0.46477228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8adc454dfb33d890800000000000000
+      internalID: -7434532600883127667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFish2Pieces_2
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 839
+        width: 2136
+        height: 1157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f487d049a8745caf0800000000000000
+      internalID: -376816333300598705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFish2Pieces_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 134
+        width: 449
+        height: 437
+      alignment: 9
+      pivot: {x: 0.35328248, y: 0.8617913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c602281595e416d00800000000000000
+      internalID: 964137940760535148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFish2Pieces_4
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 168
+        width: 504
+        height: 369
+      alignment: 9
+      pivot: {x: 0.47385806, y: 0.7677894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d732013d085f6e0800000000000000
+      internalID: -1804394431694799528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 73e99e042dfa0534fba517b3b8cd9690
     internalID: 0
     vertices: []
     indices: 

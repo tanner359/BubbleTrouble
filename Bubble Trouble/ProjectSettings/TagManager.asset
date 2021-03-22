@@ -6,15 +6,17 @@ TagManager:
   tags:
   - Wall
   - Claw
+  - Bubble
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Bubble
+  - Enemies
   - 
   - 
   - 

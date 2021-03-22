@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 016b2eed728f3f24e89b85af16940225
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1109544809716207543
+    second: AngryFishPieces_0
+  - first:
+      213: 5848545563366006855
+    second: AngryFishPieces_1
+  - first:
+      213: 7560682639542423197
+    second: AngryFishPieces_2
+  - first:
+      213: -5019985094647438620
+    second: AngryFishPieces_3
+  - first:
+      213: -5152355677748170294
+    second: AngryFishPieces_4
+  - first:
+      213: 5648502023539032700
+    second: AngryFishPieces_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,11 +143,137 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AngryFishPieces_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2293
+        width: 928
+        height: 619
+      alignment: 9
+      pivot: {x: 0.9543181, y: 0.5106424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940bc7acfda1a90f0800000000000000
+      internalID: -1109544809716207543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishPieces_1
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 2201
+        width: 722
+        height: 654
+      alignment: 9
+      pivot: {x: 0.44525534, y: 0.46978143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402e15f3353a2150800000000000000
+      internalID: 5848545563366006855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishPieces_2
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 1839
+        width: 524
+        height: 1073
+      alignment: 9
+      pivot: {x: 0.072559156, y: 0.3894903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e836d6dc0fce860800000000000000
+      internalID: 7560682639542423197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishPieces_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 649
+        width: 1657
+        height: 1403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a8c7472e655ab0800000000000000
+      internalID: -5019985094647438620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishPieces_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 118
+        width: 466
+        height: 271
+      alignment: 9
+      pivot: {x: 0.259679, y: 1.0104797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac17a573fc72f78b0800000000000000
+      internalID: -5152355677748170294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishPieces_5
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 118
+        width: 1153
+        height: 531
+      alignment: 9
+      pivot: {x: 0.28288826, y: 0.8101516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c728e12d9a2836e40800000000000000
+      internalID: 5648502023539032700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 224f995ad1b707e41b47d456e12696ee
     internalID: 0
     vertices: []
     indices: 

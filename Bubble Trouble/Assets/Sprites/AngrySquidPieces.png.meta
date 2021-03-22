@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: ea54df710c3cb994b9d1bdbf97e7dc99
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6328331854713625652
+    second: AngrySquidPieces_0
+  - first:
+      213: -6801263309060851094
+    second: AngrySquidPieces_1
+  - first:
+      213: 5208486391730588188
+    second: AngrySquidPieces_2
+  - first:
+      213: 8865616047288112217
+    second: AngrySquidPieces_3
+  - first:
+      213: -2955537994815391443
+    second: AngrySquidPieces_4
+  - first:
+      213: 990152663478253525
+    second: AngrySquidPieces_5
+  - first:
+      213: -5887091375386881745
+    second: AngrySquidPieces_6
+  - first:
+      213: 1342105675619793449
+    second: AngrySquidPieces_7
+  - first:
+      213: 7960571915712741649
+    second: AngrySquidPieces_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,11 +152,200 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AngrySquidPieces_0
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 3252
+        width: 458
+        height: 367
+      alignment: 9
+      pivot: {x: 0.8643811, y: 0.9547315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c9efcfa40c2d750800000000000000
+      internalID: 6328331854713625652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_1
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 2358
+        width: 1215
+        height: 1499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ab7871e0f0d91a0800000000000000
+      internalID: -6801263309060851094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_2
+      rect:
+        serializedVersion: 2
+        x: 3284
+        y: 3250
+        width: 458
+        height: 369
+      alignment: 9
+      pivot: {x: 0.11644175, y: 0.9760702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ace8c07c2484840800000000000000
+      internalID: 5208486391730588188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 2000
+        width: 411
+        height: 886
+      alignment: 9
+      pivot: {x: 0.4572583, y: 0.99568236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9545c9da2def80b70800000000000000
+      internalID: 8865616047288112217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_4
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 1848
+        width: 654
+        height: 768
+      alignment: 9
+      pivot: {x: 0.11051805, y: 1.0032209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29bbd25ad1dbf6d0800000000000000
+      internalID: -2955537994815391443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_5
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1238
+        width: 333
+        height: 659
+      alignment: 9
+      pivot: {x: 0.7373916, y: 0.97982675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d73704f99abdbd00800000000000000
+      internalID: 990152663478253525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_6
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 1238
+        width: 333
+        height: 659
+      alignment: 9
+      pivot: {x: 0.18347791, y: 1.0064837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f219cc1d599dc4ea0800000000000000
+      internalID: -5887091375386881745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_7
+      rect:
+        serializedVersion: 2
+        x: 2987
+        y: 464
+        width: 297
+        height: 893
+      alignment: 9
+      pivot: {x: 0.38170522, y: 0.98196095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a7a5e400e10a210800000000000000
+      internalID: 1342105675619793449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidPieces_8
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 464
+        width: 648
+        height: 774
+      alignment: 9
+      pivot: {x: 0.8659788, y: 0.97662354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111420dfaf1a97e60800000000000000
+      internalID: 7960571915712741649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 453e6d6803afed647868952f11da709a
     internalID: 0
     vertices: []
     indices: 
