@@ -67,21 +67,21 @@ public class PlayerController : MonoBehaviour
 
     public void Walk(float direction)
     {
-        animator.SetFloat("MovementSpeed", Mathf.Abs(direction * 1.2f));
+        animator.SetFloat("MovementSpeed", Mathf.Abs(direction * 1.5f));
         if (direction <= -0.10f)
         {
             animator.SetBool("Walk", true);           
-            rb.velocity = Vector2.left * movementSpeed * Mathf.Abs(direction);
+            rb.velocity = new Vector2(-1 * movementSpeed * Mathf.Abs(direction), rb.velocity.y);
         }
         else if (direction >= 0.10f)
         {
             animator.SetBool("Walk", true);
-            rb.velocity = Vector2.right * movementSpeed * Mathf.Abs(direction);
+            rb.velocity = new Vector2(1 * movementSpeed * Mathf.Abs(direction), rb.velocity.y);
         }
         else
         {
             animator.SetBool("Walk", false);
-            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
 

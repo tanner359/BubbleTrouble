@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 1c9c0f09afdeea949bf977222100614e
+guid: c9b59d9f572ec284c98c6150665bb512
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pointSprite: {fileID: 2800000, guid: 793a37b104b49eb4ead5d35715331ea8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

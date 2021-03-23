@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3000792012611104427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.7, y: -30.5, z: 0}
-  m_LocalScale: {x: 1.7398, y: 1.7398, z: 1.7398}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467191164727871353}
   m_Father: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 3304560656613917307, guid: 31eff86ecefa5ca4e90aac3ccbdc13ee, type: 3}
   spawnDelay: 2
   shootForce: 6
+  bubbleLifeTime: 10
 --- !u!1 &8139961952605171107
 GameObject:
   m_ObjectHideFlags: 0

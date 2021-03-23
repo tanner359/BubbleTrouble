@@ -42,6 +42,6 @@ public class Launcher : MonoBehaviour
     public void GameOver()
     {
         OpenMenu(gameOverMenu);
-        //gameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
+        gameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
     }
 }
