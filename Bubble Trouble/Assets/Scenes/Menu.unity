@@ -1662,7 +1662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.67297363, y: 0}
+  m_AnchoredPosition: {x: 0.67285156, y: 0}
   m_SizeDelta: {x: -253, y: 1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1034861725
@@ -1760,15 +1760,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
-  m_sharedMaterial: {fileID: -8503300526077249240, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
+  m_sharedMaterial: {fileID: -8925246482210923977, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1896,15 +1896,15 @@ MonoBehaviour:
 
     Trouble'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
-  m_sharedMaterial: {fileID: -8503300526077249240, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
+  m_sharedMaterial: {fileID: -8925246482210923977, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2895,7 +2895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 203.44897}
+  m_AnchoredPosition: {x: 0, y: 203.44922}
   m_SizeDelta: {x: -254, y: 1}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1636010971
@@ -3165,15 +3165,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
-  m_sharedMaterial: {fileID: -8503300526077249240, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
+  m_sharedMaterial: {fileID: -8925246482210923977, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3299,15 +3299,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
-  m_sharedMaterial: {fileID: -8503300526077249240, guid: 2fddccd533468004b9d2b28f500ccc4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
+  m_sharedMaterial: {fileID: -8925246482210923977, guid: 55f19f78b84f8894db5bc032464fac2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
