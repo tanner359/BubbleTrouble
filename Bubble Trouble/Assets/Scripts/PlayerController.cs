@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     public Launcher launcher;
     public ContactFilter2D incomingDamageFilter;
     List<Collider2D> incomingColliders = new List<Collider2D>();
-    
+
+    public AudioSource hitsound;
 
     bool Dead {get;set;}
-
 
     Vector3 tilt;
     Touch touch;
@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
             bubbleRB.AddForce(direction * 50, ForceMode2D.Impulse);
+            hitsound.Play();
         }        
     }   
 }
