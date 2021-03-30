@@ -30,7 +30,7 @@ public class Bubble : MonoBehaviour
             animator.speed = newAnimatorSpeed;
             animator.SetTrigger("Squish_H");       
         }       
-    }
+    } 
 
     
 

@@ -579,10 +579,21 @@ MonoBehaviour:
   body: {fileID: 3016744583965287010}
   movementSpeed: 4
   Health: 1
+  range: 50
   enemyType: 0
-  locations: []
-  speeds: []
-  InTransit: 0
+  locations:
+  - {x: -18.79227, y: 4.295361}
+  - {x: -8.590754, y: 16.644575}
+  - {x: 1.2080712, y: 4.9665127}
+  - {x: -8.724988, y: 4.5638275}
+  speeds:
+  - 10
+  - 10
+  - 10
+  - 10
+  attack: 0
+  wander: 0
+  chase: 0
 --- !u!95 &2552403892725092197
 Animator:
   serializedVersion: 3

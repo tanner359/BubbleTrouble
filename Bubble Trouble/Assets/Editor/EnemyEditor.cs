@@ -8,17 +8,22 @@ public class EnemyEditor : Editor
 
     public Texture2D pointSprite;
     public bool edit;
-    private static GUIStyle buttonStyle;
-    private static GUIStyle buttonStyleToggled;
-    
+    public float handleSize = 2;
+    private Enemy lastInspected;
+    private Enemy enemy;
+    static Vector2 lastPos;
+    Vector2 newPos;
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
+        if((Enemy)target != lastInspected)
+        {
+            enemy = (Enemy)target;
+            lastPos = enemy.transform.position;
+        }
         
-
-        Enemy enemy = (Enemy)target;
 
         GUILayout.BeginVertical();
         GUILayout.BeginHorizontal();
@@ -27,57 +32,77 @@ public class EnemyEditor : Editor
         if (GUILayout.Button("Edit Points", GUILayout.Width(75), GUILayout.Height(30)))
         {
             edit = !edit;
-            Debug.Log(edit);
-        }
+            EditorWindow view = EditorWindow.GetWindow<SceneView>();
+            view.Repaint();           
+        }     
 
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
-        GUILayout.EndVertical();       
+        GUILayout.EndVertical();
+
+        lastInspected = enemy;        
     }
 
-    static Vector2 lastPos;
-
-    private void OnSceneGUI()
+    public void OnSceneGUI()
     {
-        if (EditorApplication.isPlaying)
+        newPos = enemy.transform.position;
+
+        if (edit)
         {
-            Debug.Log(edit);
-            edit = false;
-        }
-
-        Enemy enemy = (Enemy)target;
-        Vector2 enemyPos = enemy.transform.position;
-
-        for (int i = 0; i < enemy.GetLocations().Count; i++)
-        {           
-            Handles.color = Color.red;
-            
-            enemy.GetLocations()[i] = Handles.PositionHandle(enemy.GetLocations()[i], Quaternion.identity);
-            if(i > enemy.speeds.Count-1)
+            for (int i = 0; i < enemy.locations.Count; i++)
             {
-                enemy.speeds.Add(0);
-            }
-            else if (i < enemy.speeds.Count-1)
-            {
-                enemy.speeds.Remove(0);
-            }
-
-            if (Event.current.type == EventType.Repaint)
-            {
-                Handles.SphereHandleCap(i, enemy.GetLocations()[i], Quaternion.identity, 1, EventType.Repaint);
-                if(i + 1 < enemy.GetLocations().Count)
+                Handles.color = Color.green;
+                if (i == enemy.locations.Count - 1)
                 {
-                    Handles.DrawLine(enemy.GetLocations()[i], enemy.GetLocations()[i + 1]);
-                }               
-            }
-        }      
-        if (enemyPos != lastPos && edit)
-        {
-            for(int i = 0; i < enemy.GetLocations().Count; i++)
-            {
-                enemy.GetLocations()[i] += (enemyPos - lastPos);
+                    Handles.color = Color.red;
+                }
+                else if (i > 0)
+                {
+                    Handles.color = Color.yellow;
+                }
+
+                EditorGUI.BeginChangeCheck();
+                Vector2 handlePos = Handles.FreeMoveHandle(enemy.locations[i], Quaternion.identity, handleSize, new Vector3(0, 0, 0), Handles.SphereHandleCap);               
+
+                if (i > enemy.speeds.Count - 1)
+                {
+                    enemy.speeds.Add(0);
+                }
+                else if (i < enemy.speeds.Count - 1)
+                {
+                    enemy.speeds.Remove(0);
+                }
+
+                if (Event.current.type == EventType.Repaint)
+                {
+                    Handles.Label(enemy.locations[0] + Vector2.up * 2.5f + Vector2.left * 2f, "START");
+                    Handles.Label(enemy.locations[enemy.locations.Count - 1] + Vector2.up * 2.5f + Vector2.left * 2f, "STOP");
+                    Handles.SphereHandleCap(i, enemy.locations[i], Quaternion.identity, handleSize, EventType.Repaint);
+
+                    if (i + 1 < enemy.locations.Count)
+                    {
+                        Handles.color = Color.magenta;
+                        Handles.DrawLine(enemy.locations[i], enemy.locations[i + 1], 2f);
+                        Handles.Label((enemy.locations[i] + enemy.locations[i + 1]) / 2, "Speed: " + enemy.speeds[i]);
+                    }
+                }
+
+                if(EditorGUI.EndChangeCheck())
+                {
+                    Undo.RecordObject(enemy, "Locations Changed");
+                    enemy.locations[i] = handlePos;
+                    enemy.UpdateValues();
+                }
             }            
+            
         }
-        lastPos = enemyPos;      
+        if (newPos != lastPos && !enemy.attack)
+        {
+            for (int i = 0; i < enemy.locations.Count; i++)
+            {
+                enemy.locations[i] = enemy.locations[i] + (newPos - lastPos);
+            }
+        }
+        lastPos = newPos;
     }  
 }
