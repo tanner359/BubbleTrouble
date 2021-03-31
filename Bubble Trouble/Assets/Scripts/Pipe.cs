@@ -18,8 +18,6 @@ public class Pipe : MonoBehaviour
         StartCoroutine(SpawnDelay(spawnDelay));
     }
 
-
-
     public void SpawnBubble()
     {
         GameObject bubble = Instantiate(bubblePrefab, spawnPoint.position, new Quaternion(0,0,90,0));
