@@ -137,7 +137,16 @@ MonoBehaviour:
   body: {fileID: 8600872223797928399}
   movementSpeed: 6
   Health: 1
+  range: 20
   enemyType: 0
-  locations: []
-  speeds: []
-  InTransit: 0
+  locations:
+  - {x: 12.894712, y: 35.391872}
+  - {x: 12.757533, y: 4.389689}
+  - {x: 12.894712, y: 25.515072}
+  speeds:
+  - 10
+  - 25
+  - 15
+  attack: 0
+  wander: 0
+  chase: 0
