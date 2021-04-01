@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     public List<float> speeds;
     public bool attack = false;
     public bool wander = false;
-    public bool chase = false;
+    public bool move = false;
 
     public GameObject player;
 
@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         renderers = body.GetComponentsInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(Chase(GeneratePointInBounds()));        
+        StartCoroutine(MoveTo(GeneratePointInBounds()));        
     }
 
     public void UpdateValues()
@@ -77,9 +77,17 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         //target = GameObject.FindGameObjectWithTag("Player").transform.position;
-        if (attack || wander || chase)
+        if (attack || wander || move)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
+            if (!IsInsideBounds() && !move)
+            {
+                StopCoroutine(Attack());
+                attack = false;
+                StopCoroutine(Wander());
+                wander = false;
+                StartCoroutine(MoveTo(GeneratePointInBounds()));                
+            }
         } 
     }
 
@@ -103,7 +111,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(5, 10));                       
             if (!IsInsideBounds())
             {
-                StartCoroutine(Chase(GeneratePointInBounds()));
+                StartCoroutine(MoveTo(GeneratePointInBounds()));
             }
             else
             {
@@ -112,13 +120,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private IEnumerator Chase(Vector2 newTarget)
+    private IEnumerator MoveTo(Vector2 newTarget)
     {
-        chase = true;
+        move = true;
         target = newTarget;
         yield return new WaitUntil(() => IsInsideBounds());
         yield return new WaitForSeconds(0.2f);
-        chase = false;
+        move = false;
         StartCoroutine(Wander());       
     }
 
@@ -129,17 +137,9 @@ public class Enemy : MonoBehaviour
         SetDirection(dir);
 
         target = (Vector2)transform.position + new Vector2(RandomDir() * RandomDistance(5, 10), RandomDir() * RandomDistance(5, 10));
-        movementSpeed = RandomSpeed(3, 10);
-
-        yield return new WaitForSeconds(RandomTime(3, 6));  
-        if(!IsInsideBounds())
-        {
-            StartCoroutine(Chase(GeneratePointInBounds()));
-        }
-        else
-        {
-            StartCoroutine(Attack());
-        }
+        movementSpeed = RandomSpeed(3, 10);      
+        yield return new WaitForSeconds(RandomTime(3, 6));
+        StartCoroutine(Attack());
         wander = false;
     }
 

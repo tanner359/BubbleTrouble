@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
             bubbleRB.AddForce(direction * 50, ForceMode2D.Impulse);
+            hitsound.pitch = Random.Range(0.65f, 1.0f);
             hitsound.Play();
         }        
     }   

@@ -8,7 +8,7 @@ public class Bubble : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public bool wasHit = false;
-    public AudioSource pop;
+    public AudioClip pop;
 
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
@@ -53,7 +53,7 @@ public class Bubble : MonoBehaviour
 
     private void OnDestroy()
     {
-        pop.Play();
+        AudioSource.PlayClipAtPoint(pop, transform.position);
     }
 
 }
