@@ -21,8 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         // tilt stuff  
         tilt = Input.acceleration;
-        Walk(tilt.x);
-        
+        Walk(tilt.x); 
     }
 
     Vector2 touchPos;
@@ -43,11 +42,25 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (powerActive)
+        {
+            //possibly add a color filter for each powerup
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                hitForce = 50f;
+                Pipe.speedPwr = false;
+                powerActive = false;
+            }
+        }
+
         if (Physics2D.OverlapCollider(GetComponent<BoxCollider2D>(), incomingDamageFilter, incomingColliders) > 0 && !Dead)
         {
             launcher.GameOver();
             Dead = true;
         }
+
+        //Debug.Log(Pipe.spawnDelay);
     }
     bool attack = false;
     public void EnableAttack() { attack = true; }
@@ -85,6 +98,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    float hitForce = 50f;
+    bool powerActive = false;
+    public float timer;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
@@ -92,9 +108,24 @@ public class PlayerController : MonoBehaviour
             collision.GetComponent<Bubble>().SetBubbleHit(true);
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
-            bubbleRB.AddForce(direction * 50, ForceMode2D.Impulse);
+            bubbleRB.AddForce(direction * hitForce, ForceMode2D.Impulse);
             hitsound.pitch = Random.Range(0.65f, 1.0f);
             hitsound.Play();
-        }        
+        }   
+        
+        if (collision.gameObject.CompareTag("SpeedPwrup"))
+        {
+            hitForce = 150f;
+            timer = 10f;
+            powerActive = true;
+        }
+
+        if (collision.gameObject.CompareTag("BubblePwrup"))
+        {
+            //Pipe.spawnDelay = 2f;
+            Pipe.speedPwr = true;
+            timer = 10f;
+            powerActive = true;
+        }
     }   
 }
