@@ -7,11 +7,10 @@ public class Pipe : MonoBehaviour
     public Animator animator;
     public Transform spawnPoint;
     public GameObject bubblePrefab;
-    public float spawnDelay;
+    public float spawnDelay = 4f;
     public float shootForce;
     public float bubbleLifeTime = 10;
-
-
+    public static bool speedPwr = false;
 
     private void Awake()
     {
@@ -25,11 +24,11 @@ public class Pipe : MonoBehaviour
         Destroy(bubble, bubbleLifeTime);
     }
 
-
     public IEnumerator SpawnDelay(float spawnDelay) 
     {
         yield return new WaitForSeconds(spawnDelay);
         animator.SetTrigger("ShootBubble");
+        if (speedPwr == true) spawnDelay = 1f; else spawnDelay = 4f;
         StartCoroutine(SpawnDelay(spawnDelay));
     }
 }

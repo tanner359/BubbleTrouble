@@ -8,6 +8,9 @@ TagManager:
   - Claw
   - Bubble
   - Enemy
+  - ToxicPwrup
+  - SpeedPwrup
+  - BubblePwrup
   layers:
   - Default
   - TransparentFX
