@@ -33,8 +33,6 @@ public class Bubble : MonoBehaviour
         }       
     } 
 
-    
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         float yDiff = Mathf.Abs(Mathf.Abs(transform.position.y) - Mathf.Abs(collision.transform.position.y));

@@ -213,4 +213,9 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         renderer.color = origin;
     }
+
+    private void OnDestroy()
+    {
+        ItemSpawning.SpawnRandom(transform.position);
+    }
 }
