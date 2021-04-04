@@ -16,31 +16,34 @@ public class EnemyEditor : Editor
 
     public override void OnInspectorGUI()
     {
+
         base.OnInspectorGUI();
 
-        if((Enemy)target != lastInspected)
+        if ((Enemy)target != lastInspected)
         {
             enemy = (Enemy)target;
             lastPos = enemy.transform.position;
         }
-        
 
-        GUILayout.BeginVertical();
+        GUILayout.BeginArea(new Rect(10, 340, Screen.width-100, 30));
         GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
+        GUILayout.FlexibleSpace();     
 
-        if (GUILayout.Button("Edit Points", GUILayout.Width(75), GUILayout.Height(30)))
+        if (GUILayout.Button("Edit Locations", GUILayout.Width(Screen.width/2 - 100), GUILayout.Height(30)))
         {
             edit = !edit;
             EditorWindow view = EditorWindow.GetWindow<SceneView>();
             view.Repaint();           
-        }     
-
+        }       
+        if (GUILayout.Button("Edit Boundry", GUILayout.Width(Screen.width / 2 - 100), GUILayout.Height(30)))
+        {
+            Debug.Log("edit boundry activated");
+        }
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
-        GUILayout.EndVertical();
+        GUILayout.EndArea();
 
-        lastInspected = enemy;        
+        lastInspected = enemy;
     }
 
     public void OnSceneGUI()

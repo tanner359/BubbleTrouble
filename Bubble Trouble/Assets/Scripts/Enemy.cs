@@ -33,10 +33,15 @@ public class Enemy : MonoBehaviour
     //public float rangeFromPlayer;
 
     [Space(10)]
-    [Header("Movement Pattern")]
+    [Header("AI Movement")]
     public Enemy_Type enemyType;
+    [Space(50)]
     [SerializeField] public List<Vector2> locations;
     public List<float> speeds;
+
+
+    [Space(10)]
+    [Header("Movement Phase")]
     public bool attack = false;
     public bool wander = false;
     public bool move = false;
@@ -80,7 +85,7 @@ public class Enemy : MonoBehaviour
         if (attack || wander || move)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
-            if (!IsInsideBounds() && !move)
+            if (!IsInsideBounds() && !move && !attack)
             {
                 StopCoroutine(Attack());
                 attack = false;
@@ -156,7 +161,7 @@ public class Enemy : MonoBehaviour
     }
     public void SetDirection(int dir)
     {      
-        gameObject.transform.localScale = new Vector3(dir * Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);    
+        gameObject.transform.localScale = new Vector3(dir * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);    
     }
     //public float GetDistanceFromPlayer()
     //{       
