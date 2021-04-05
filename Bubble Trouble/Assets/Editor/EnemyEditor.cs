@@ -17,13 +17,7 @@ public class EnemyEditor : Editor
     public override void OnInspectorGUI()
     {
 
-        base.OnInspectorGUI();
-
-        if ((Enemy)target != lastInspected)
-        {
-            enemy = (Enemy)target;
-            lastPos = enemy.transform.position;
-        }
+        base.OnInspectorGUI();      
 
         GUILayout.BeginArea(new Rect(10, 340, Screen.width-100, 30));
         GUILayout.BeginHorizontal();
@@ -35,23 +29,33 @@ public class EnemyEditor : Editor
             EditorWindow view = EditorWindow.GetWindow<SceneView>();
             view.Repaint();           
         }       
-        if (GUILayout.Button("Edit Boundry", GUILayout.Width(Screen.width / 2 - 100), GUILayout.Height(30)))
+        if (GUILayout.Button("Add Location", GUILayout.Width(Screen.width / 2 - 100), GUILayout.Height(30)))
         {
-            Debug.Log("edit boundry activated");
+            enemy.locations.Add(enemy.transform.position);
+            enemy.speeds.Add(5f);
         }
+
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
         GUILayout.EndArea();
-
-        lastInspected = enemy;
+       
     }
 
     public void OnSceneGUI()
     {
-        newPos = enemy.transform.position;
 
-        if (edit)
+        if ((Enemy)target != lastInspected || enemy == null)
         {
+            enemy = (Enemy)target;           
+            lastPos = enemy.transform.position;
+            Debug.Log("New target");
+        }
+
+        newPos = enemy.transform.position;     
+        
+        if (edit || !enemy.attack)
+        {
+            Debug.Log("edit");
             for (int i = 0; i < enemy.locations.Count; i++)
             {
                 Handles.color = Color.green;
@@ -99,13 +103,17 @@ public class EnemyEditor : Editor
             }            
             
         }
+
+
         if (newPos != lastPos && !enemy.attack)
         {
+            Debug.Log("Position change");
             for (int i = 0; i < enemy.locations.Count; i++)
             {
                 enemy.locations[i] = enemy.locations[i] + (newPos - lastPos);
             }
         }
         lastPos = newPos;
+        lastInspected = enemy;
     }  
 }

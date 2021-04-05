@@ -236,12 +236,13 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 128
+      m_Bits: 384
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
   hitsound: {fileID: 1739524437721337352}
+  timer: 0
 --- !u!61 &7985995717682116119
 BoxCollider2D:
   m_ObjectHideFlags: 0

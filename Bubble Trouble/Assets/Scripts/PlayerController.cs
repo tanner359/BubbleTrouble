@@ -20,8 +20,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // tilt stuff  
-        tilt = Input.acceleration;
-        Walk(tilt.x); 
+        if (!Dead)
+        {
+            tilt = Input.acceleration;
+            Walk(tilt.x);
+        }     
     }
 
     Vector2 touchPos;
@@ -58,6 +61,13 @@ public class PlayerController : MonoBehaviour
         {
             launcher.GameOver();
             Dead = true;
+            animator.enabled = false;
+            for(int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
+                transform.GetChild(i).gameObject.AddComponent<BoxCollider2D>();
+                transform.GetChild(i).GetComponent<Rigidbody2D>().AddForce(Vector2.one * 50f, ForceMode2D.Impulse);
+            }
         }
 
         //Debug.Log(Pipe.spawnDelay);

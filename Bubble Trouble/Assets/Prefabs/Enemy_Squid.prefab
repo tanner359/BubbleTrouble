@@ -505,8 +505,9 @@ GameObject:
   - component: {fileID: 8682795985352709825}
   - component: {fileID: 7880213434736165855}
   - component: {fileID: 2552403892725092197}
+  - component: {fileID: 3977671818840594136}
   m_Layer: 7
-  m_Name: BubbleSquid
+  m_Name: Enemy_Squid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +522,7 @@ Transform:
   m_GameObject: {fileID: 2899358879617767361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 3016744583965287010}
   m_Father: {fileID: 0}
@@ -577,23 +578,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 3016744583965287010}
-  movementSpeed: 4
+  movementSpeed: 10
   Health: 1
-  range: 50
+  MIN_X: 0
+  MAX_X: 0
+  MIN_Y: 1500
+  MAX_Y: -300
   enemyType: 0
   locations:
-  - {x: -18.79227, y: 4.295361}
-  - {x: -8.590754, y: 16.644575}
-  - {x: 1.2080712, y: 4.9665127}
-  - {x: -8.724988, y: 4.5638275}
+  - {x: -6.3845477, y: 30.77103}
+  - {x: 8.912666, y: 30.912403}
+  - {x: 1.0473957, y: 30.827454}
   speeds:
-  - 10
   - 10
   - 10
   - 10
   attack: 0
   wander: 0
-  chase: 0
+  move: 0
+  triggerPosition: 1
+  player: {fileID: 0}
 --- !u!95 &2552403892725092197
 Animator:
   serializedVersion: 3
@@ -613,6 +617,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3977671818840594136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899358879617767361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6326f24b9338d334299be1e8add3f70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InkShotPrefab: {fileID: 8389261914908521558, guid: 87061c8e73ba0994da3db755ce159d54, type: 3}
+  shotSpeed: 30
 --- !u!1 &7664373848714630287
 GameObject:
   m_ObjectHideFlags: 0

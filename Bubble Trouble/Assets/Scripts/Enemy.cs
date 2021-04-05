@@ -39,12 +39,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] public List<Vector2> locations;
     public List<float> speeds;
 
-
     [Space(10)]
-    [Header("Movement Phase")]
+    [Header("Current Movement Phase")]
     public bool attack = false;
     public bool wander = false;
     public bool move = false;
+
+    [Header("Attack Properties")]
+    public int triggerPosition = 1;
 
     public GameObject player;
 
@@ -81,24 +83,24 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //target = GameObject.FindGameObjectWithTag("Player").transform.position;
         if (attack || wander || move)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
-            if (!IsInsideBounds() && !move && !attack)
+            if (!IsInsideBounds() && !attack && !move)
             {
-                StopCoroutine(Attack());
-                attack = false;
-                StopCoroutine(Wander());
-                wander = false;
-                StartCoroutine(MoveTo(GeneratePointInBounds()));                
+                StopAllCoroutines();
+                StartCoroutine(MoveTo(GeneratePointInBounds()));
             }
-        } 
+        }        
     }
 
     int i = 0;
     private IEnumerator Attack()
     {
+        #region Animations
+        if (i == triggerPosition) { GetComponent<Animator>().SetTrigger("Attack_01"); }
+        Debug.Log("Attack");
+        #endregion
         if (i < locations.Count)
         {
             attack = true;
@@ -106,33 +108,26 @@ public class Enemy : MonoBehaviour
             movementSpeed = speeds[i];
             yield return new WaitUntil(() => (Vector2)transform.position == locations[i]);
             yield return new WaitForSeconds(0.05f);
-            i++;
+            i++;           
             StartCoroutine(Attack());
         }
-        else
+        else if(i == locations.Count)
         {
             i = 0;
             attack = false;
-            yield return new WaitForSeconds(Random.Range(5, 10));                       
-            if (!IsInsideBounds())
-            {
-                StartCoroutine(MoveTo(GeneratePointInBounds()));
-            }
-            else
-            {
-                StartCoroutine(Wander());
-            }
+            yield return new WaitForSeconds(Random.Range(5, 10));                                 
+            StartCoroutine(Wander());
         }
     }
 
     private IEnumerator MoveTo(Vector2 newTarget)
-    {
+    {     
         move = true;
         target = newTarget;
         yield return new WaitUntil(() => IsInsideBounds());
         yield return new WaitForSeconds(0.2f);
         move = false;
-        StartCoroutine(Wander());       
+        StartCoroutine(Wander());
     }
 
     private IEnumerator Wander()
@@ -142,10 +137,10 @@ public class Enemy : MonoBehaviour
         SetDirection(dir);
 
         target = (Vector2)transform.position + new Vector2(RandomDir() * RandomDistance(5, 10), RandomDir() * RandomDistance(5, 10));
-        movementSpeed = RandomSpeed(3, 10);      
+        movementSpeed = RandomSpeed(3, 8);      
         yield return new WaitForSeconds(RandomTime(3, 6));
-        StartCoroutine(Attack());
         wander = false;
+        StartCoroutine(Attack());
     }
 
 
