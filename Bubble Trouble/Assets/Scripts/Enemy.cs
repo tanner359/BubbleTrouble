@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
     Vector2 Top_L;
     Vector2 Bottom_R;
     Vector2 Top_R;
-    //public float rangeFromPlayer;
 
     [Space(10)]
     [Header("AI Movement")]
@@ -44,29 +43,37 @@ public class Enemy : MonoBehaviour
     public bool attack = false;
     public bool wander = false;
     public bool move = false;
+    public bool follow = false;
 
     [Header("Attack Properties")]
     public int triggerPosition = 1;
 
     public GameObject player;
 
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         renderers = body.GetComponentsInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(MoveTo(GeneratePointInBounds()));        
+        if (IsInsideBounds())
+        {
+            StartCoroutine(Wander());
+        }
+        else
+        {
+            StartCoroutine(MoveToBounds());
+        }
     }
 
     public void UpdateValues()
     {
-        //updates the values in the editor
+        //updates the values in the editor DO NOT REMOVE THIS!!
     }
 
     public void Update()
     {
-        //Update location values in editor
-        //rangeFromPlayer = GetDistanceFromPlayer();
+        #region BOUNDRY POSITION CALCULATIONS
         Bottom_L = Camera.main.ScreenToWorldPoint(new Vector3(0 + MIN_X, 0 + MIN_Y, Camera.main.transform.position.z));
         Top_L = Camera.main.ScreenToWorldPoint(new Vector3(0 + MIN_X, Screen.height + MAX_Y, Camera.main.transform.position.z));
         Bottom_R = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width + MAX_X, 0 + MIN_Y, Camera.main.transform.position.z));
@@ -75,31 +82,56 @@ public class Enemy : MonoBehaviour
         Debug.DrawLine(Bottom_L, Bottom_R, Color.red);
         Debug.DrawLine(Bottom_R, Top_R, Color.red);
         Debug.DrawLine(Top_R, Top_L, Color.red);
-        Debug.DrawLine(Bottom_L, Top_L, Color.red); 
+        Debug.DrawLine(Bottom_L, Top_L, Color.red);
+        #endregion
+
+        #region UPDATE LOCATIONS RELATIVE POSITION
+        if (locations[0] != (Vector2)transform.position && !attack)
+        {
+            Vector2 diff = (Vector2)transform.position - locations[0];
+            locations[0] = transform.position;
+
+            for (int i = 1; i < locations.Count; i++)
+            {
+                locations[i] += diff;
+            }
+        }
+        #endregion
     }
-
-    
-
 
     private void FixedUpdate()
     {
+        
+
         if (attack || wander || move)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
             if (!IsInsideBounds() && !attack && !move)
             {
                 StopAllCoroutines();
-                StartCoroutine(MoveTo(GeneratePointInBounds()));
+                move = true;
+                StartCoroutine(MoveToBounds());             
             }
+        }
+        else if (follow)
+        {
+            target = new Vector2(player.transform.position.x, transform.position.y);
+            transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
         }        
-    }
 
+    }
+    #region STATE MACHINE
     int i = 0;
     private IEnumerator Attack()
     {
+        if(i == 0 && enemyType == Enemy_Type.Melee)
+        {
+            StartCoroutine(FollowPlayer());
+            yield return new WaitUntil(() => follow == false);
+        }
+        
         #region Animations
         if (i == triggerPosition) { GetComponent<Animator>().SetTrigger("Attack_01"); }
-        Debug.Log("Attack");
         #endregion
         if (i < locations.Count)
         {
@@ -115,35 +147,45 @@ public class Enemy : MonoBehaviour
         {
             i = 0;
             attack = false;
-            yield return new WaitForSeconds(Random.Range(5, 10));                                 
+            yield return new WaitForSeconds(Random.Range(1, 2));                                 
             StartCoroutine(Wander());
         }
     }
 
-    private IEnumerator MoveTo(Vector2 newTarget)
-    {     
-        move = true;
-        target = newTarget;
+    private IEnumerator FollowPlayer()
+    {
+        follow = true;
+        movementSpeed = 16f;
+        yield return new WaitForSeconds(2f);
+        follow = false;
+    }
+
+    private IEnumerator MoveToBounds()
+    {
+        movementSpeed = 10f;
+        target = GeneratePointInBounds();
+        move = true;     
         yield return new WaitUntil(() => IsInsideBounds());
         yield return new WaitForSeconds(0.2f);
         move = false;
         StartCoroutine(Wander());
     }
-
+  
     private IEnumerator Wander()
     {
         wander = true;
         int dir = RandomDir();
         SetDirection(dir);
 
-        target = (Vector2)transform.position + new Vector2(RandomDir() * RandomDistance(5, 10), RandomDir() * RandomDistance(5, 10));
+        target = (Vector2)transform.position + new Vector2(dir * RandomDistance(5, 10), dir * RandomDistance(5, 10));
         movementSpeed = RandomSpeed(3, 8);      
         yield return new WaitForSeconds(RandomTime(3, 6));
         wander = false;
         StartCoroutine(Attack());
     }
+    #endregion
 
-
+    #region AI FUNCTIONS
     public int RandomDir()
     {
         int num = Random.Range(-1, 2);
@@ -157,11 +199,7 @@ public class Enemy : MonoBehaviour
     public void SetDirection(int dir)
     {      
         gameObject.transform.localScale = new Vector3(dir * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);    
-    }
-    //public float GetDistanceFromPlayer()
-    //{       
-    //    return Vector2.Distance(player.transform.position, gameObject.transform.position);
-    //}
+    }   
     public float RandomTime(float MIN, float MAX)
     {
         return Random.Range(MIN, MAX);
@@ -173,14 +211,14 @@ public class Enemy : MonoBehaviour
     public bool IsInsideBounds()
     {
         float posX = transform.position.x, posY = transform.position.y;       
-        if(posX > Bottom_L.x && posX < Bottom_R.x && posY > Bottom_L.y && posY < Top_L.y) {return true;}
+        if(posX >= Bottom_L.x && posX <= Bottom_R.x && posY >= Bottom_L.y && posY <= Top_L.y) {return true;}
         else{return false;}
     }
     public Vector2 GeneratePointInBounds()
     {
         return new Vector2(Random.Range(Bottom_L.x, Bottom_R.x), Random.Range(Bottom_L.y, Top_L.y));
     }
-
+    #endregion
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -207,10 +245,5 @@ public class Enemy : MonoBehaviour
         renderer.color = change;
         yield return new WaitForSeconds(0.1f);
         renderer.color = origin;
-    }
-
-    private void OnDestroy()
-    {
-        ItemSpawning.SpawnRandom(transform.position);
-    }
+    }   
 }
