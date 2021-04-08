@@ -64,9 +64,9 @@ public class PlayerController : MonoBehaviour
             animator.enabled = false;
             for(int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
                 transform.GetChild(i).gameObject.AddComponent<BoxCollider2D>();
-                transform.GetChild(i).GetComponent<Rigidbody2D>().AddForce(Vector2.one * 50f, ForceMode2D.Impulse);
+                Rigidbody2D rb = transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
+                rb.AddForce(Vector2.one * 30f, ForceMode2D.Impulse);
             }
         }
 
@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
         {
+            Debug.Log("Bubble hit");
             collision.GetComponent<Bubble>().SetBubbleHit(true);
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
