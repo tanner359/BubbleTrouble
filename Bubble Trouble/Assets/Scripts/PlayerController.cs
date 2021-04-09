@@ -45,15 +45,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (powerActive)
-        {
+        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr) {
             //possibly add a color filter for each powerup
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
                 hitForce = 50f;
-                Pipe.speedPwr = false;
-                powerActive = false;
+                Pipe.bubbleSpeedPwr = false;
+                Pipe.bubbleSpawnPwr = false;
             }
         }
 
@@ -109,7 +108,6 @@ public class PlayerController : MonoBehaviour
     }
 
     float hitForce = 50f;
-    bool powerActive = false;
     public float timer;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -128,15 +126,16 @@ public class PlayerController : MonoBehaviour
         {
             hitForce = 150f;
             timer = 10f;
-            powerActive = true;
+            Pipe.bubbleSpeedPwr = true;
+            Pipe.bubbleSpawnPwr = false;
         }
 
         if (collision.gameObject.CompareTag("BubblePwrup"))
         {
             //Pipe.spawnDelay = 2f;
-            Pipe.speedPwr = true;
+            Pipe.bubbleSpawnPwr = true;
+            Pipe.bubbleSpeedPwr = false;
             timer = 10f;
-            powerActive = true;
         }
     }   
 }

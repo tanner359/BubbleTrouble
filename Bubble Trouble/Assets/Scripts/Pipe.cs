@@ -10,7 +10,9 @@ public class Pipe : MonoBehaviour
     public float spawnDelay = 4f;
     public float shootForce;
     public float bubbleLifeTime = 10;
-    public static bool speedPwr = false;
+
+    public static bool bubbleSpeedPwr = false;
+    public static bool bubbleSpawnPwr = false;
 
     private void Awake()
     {
@@ -28,7 +30,7 @@ public class Pipe : MonoBehaviour
     {
         yield return new WaitForSeconds(spawnDelay);
         animator.SetTrigger("ShootBubble");
-        if (speedPwr == true) spawnDelay = 1f; else spawnDelay = 4f;
+        if (bubbleSpawnPwr == true) spawnDelay = 1f; else spawnDelay = 4f;
         StartCoroutine(SpawnDelay(spawnDelay));
     }
 }
