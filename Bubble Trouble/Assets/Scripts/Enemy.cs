@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] public List<Vector2> locations;
     public List<float> speeds;
 
+    public bool rotate;
+
     [Space(10)]
     [Header("Current Movement Phase")]
     public bool attack = false;
@@ -56,6 +58,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         renderers = body.GetComponentsInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
         if (IsInsideBounds())
         {
             StartCoroutine(Wander());
@@ -63,7 +66,7 @@ public class Enemy : MonoBehaviour
         else
         {
             StartCoroutine(MoveToBounds());
-        }
+        }          
     }
 
     public void UpdateValues()
@@ -97,12 +100,15 @@ public class Enemy : MonoBehaviour
             }
         }
         #endregion
+
+        if (rotate)
+        {
+            SetDirection();
+        }     
     }
 
     private void FixedUpdate()
-    {
-        
-
+    {       
         if (attack || wander || move)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * movementSpeed);
@@ -139,7 +145,6 @@ public class Enemy : MonoBehaviour
             target = locations[i];
             movementSpeed = speeds[i];
             yield return new WaitUntil(() => (Vector2)transform.position == locations[i]);
-            yield return new WaitForSeconds(0.05f);
             i++;           
             StartCoroutine(Attack());
         }
@@ -147,7 +152,7 @@ public class Enemy : MonoBehaviour
         {
             i = 0;
             attack = false;
-            yield return new WaitForSeconds(Random.Range(1, 2));                                 
+            yield return new WaitForSeconds(RandomTime(2, 4));
             StartCoroutine(Wander());
         }
     }
@@ -174,12 +179,9 @@ public class Enemy : MonoBehaviour
     private IEnumerator Wander()
     {
         wander = true;
-        int dir = RandomDir();
-        SetDirection(dir);
-
-        target = (Vector2)transform.position + new Vector2(dir * RandomDistance(5, 10), dir * RandomDistance(5, 10));
+        target = GeneratePointInBounds();
         movementSpeed = RandomSpeed(3, 8);      
-        yield return new WaitForSeconds(RandomTime(3, 6));
+        yield return new WaitUntil(() => (Vector2)transform.position == target);
         wander = false;
         StartCoroutine(Attack());
     }
@@ -196,10 +198,22 @@ public class Enemy : MonoBehaviour
     {
         return Random.Range(MIN, MAX);
     }
-    public void SetDirection(int dir)
-    {      
-        gameObject.transform.localScale = new Vector3(dir * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);    
-    }   
+    public void SetDirection()
+    {
+        Vector3 dir = target - (Vector2)transform.localPosition;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle + 180, Vector3.forward), 0.2f);
+
+        if (transform.rotation.eulerAngles.z > 90 && transform.rotation.eulerAngles.z < 270)
+        {
+            transform.localScale = new Vector3(1, -1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
     public float RandomTime(float MIN, float MAX)
     {
         return Random.Range(MIN, MAX);
@@ -234,7 +248,8 @@ public class Enemy : MonoBehaviour
                 }
             }
             else
-            {               
+            {
+                ItemSpawning.SpawnRandom(transform.position);
                 Destroy(gameObject);
             }            
         }

@@ -14,8 +14,6 @@ public class Targeting_Line : MonoBehaviour
         lineRend = GetComponent<LineRenderer>();
     }
 
-    
-
     private void OnTriggerStay2D(Collider2D collision)
     {            
         if (collision.CompareTag("Bubble") && !collision.GetComponent<Bubble>().WasBubbleHit())

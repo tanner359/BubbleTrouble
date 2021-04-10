@@ -30,6 +30,11 @@ public class PlayerController : MonoBehaviour
     Vector2 touchPos;
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Change Light");
+        }
+
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
