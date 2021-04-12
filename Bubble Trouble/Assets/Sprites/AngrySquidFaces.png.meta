@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 14dc367e8bd393846938b7b7c7455edc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 624375845280627380
+    second: Body_00
+  - first:
+      213: -278740056087760207
+    second: Body_01
+  - first:
+      213: -1019612446683435357
+    second: Body_02
+  - first:
+      213: -3830222798094548592
+    second: Body_03
+  - first:
+      213: -3772518970044818827
+    second: Body_04
+  - first:
+      213: -7751531903158951882
+    second: Body_05
+  - first:
+      213: -1175140691942282424
+    second: AngrySquidFaces_6
+  - first:
+      213: -2839776303356647737
+    second: AngrySquidFaces_7
+  - first:
+      213: 1258788052501769746
+    second: AngrySquidFaces_8
+  - first:
+      213: -4554757932528449655
+    second: AngrySquidFaces_9
+  - first:
+      213: 4729967541360112105
+    second: AngrySquidFaces_10
+  - first:
+      213: -8397946308460515225
+    second: AngrySquidFaces_11
+  - first:
+      213: 2439989314104221579
+    second: AngrySquidFaces_12
+  - first:
+      213: -7214034118269616109
+    second: AngrySquidFaces_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +155,305 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Body_00
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2128
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba3940f58a3aa800800000000000000
+      internalID: 624375845280627380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_01
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 2087
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b277345567b12cf0800000000000000
+      internalID: -278740056087760207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_02
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 2087
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aeedd2c1eb99d1f0800000000000000
+      internalID: -1019612446683435357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_03
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1002
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091c8f498a058dac0800000000000000
+      internalID: -3830222798094548592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_04
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 1002
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a5e020cf155abc0800000000000000
+      internalID: -3772518970044818827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_05
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1002
+        width: 707
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6306a1fadc60d6490800000000000000
+      internalID: -7751531903158951882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 102
+        width: 266
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b6caf44cf01bfe0800000000000000
+      internalID: -1175140691942282424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 66
+        width: 377
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6ead47f761798d0800000000000000
+      internalID: -2839776303356647737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_8
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 58
+        width: 173
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eafdc701d187110800000000000000
+      internalID: 1258788052501769746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_9
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 99
+        width: 235
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987cfb1eacf3ac0c0800000000000000
+      internalID: -4554757932528449655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_10
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 99
+        width: 194
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1b5ed1b6834a140800000000000000
+      internalID: 4729967541360112105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_11
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 54
+        width: 172
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7607861a350847b80800000000000000
+      internalID: -8397946308460515225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_12
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 70
+        width: 381
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f5ee28a559cd120800000000000000
+      internalID: 2439989314104221579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngrySquidFaces_13
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 147
+        width: 266
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310cdf6e03a92eb90800000000000000
+      internalID: -7214034118269616109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 80f98af1ed6987247b54b30a59aa6aca
     internalID: 0
     vertices: []
     indices: 

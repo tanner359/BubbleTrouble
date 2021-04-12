@@ -1,7 +1,40 @@
 fileFormatVersion: 2
 guid: 1e1f9352df59fc842a5d9ef5dbb086a8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5971083658674070915
+    second: Body_00
+  - first:
+      213: -2013065476938877407
+    second: Body_01
+  - first:
+      213: 5673826120918884607
+    second: AngryFishMouthPieces_2
+  - first:
+      213: -7541733659218995842
+    second: AngryFishMouthPieces_3
+  - first:
+      213: 2096585325923685907
+    second: AngryFishMouthPieces_4
+  - first:
+      213: -8111176943580251479
+    second: AngryFishMouthPieces_5
+  - first:
+      213: 8393431586949476242
+    second: Body_02
+  - first:
+      213: -6887913039845896032
+    second: Body_03
+  - first:
+      213: 3192103835496915708
+    second: Body_04
+  - first:
+      213: -8301559201864273259
+    second: Body_05
+  - first:
+      213: -8586207643182678769
+    second: Body_06
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +146,242 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Body_00
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5570
+        width: 2140
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a97907c03722da0800000000000000
+      internalID: -5971083658674070915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_01
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 5476
+        width: 2179
+        height: 1162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126b4794d972014e0800000000000000
+      internalID: -2013065476938877407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthPieces_2
+      rect:
+        serializedVersion: 2
+        x: 5135
+        y: 6372
+        width: 728
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0e3b6bbca7dbe40800000000000000
+      internalID: 5673826120918884607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthPieces_3
+      rect:
+        serializedVersion: 2
+        x: 6505
+        y: 6148
+        width: 335
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7515abd131665790800000000000000
+      internalID: -7541733659218995842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthPieces_4
+      rect:
+        serializedVersion: 2
+        x: 5499
+        y: 5570
+        width: 452
+        height: 441
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3165af8ee31981d10800000000000000
+      internalID: 2096585325923685907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthPieces_5
+      rect:
+        serializedVersion: 2
+        x: 6090
+        y: 5201
+        width: 507
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa7f8f6b8f4f6f80800000000000000
+      internalID: -8111176943580251479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_02
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 3998
+        width: 2139
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29faaaade857b7470800000000000000
+      internalID: 8393431586949476242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_03
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 3946
+        width: 2135
+        height: 1213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0543085973960a0800000000000000
+      internalID: -6887913039845896032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_04
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2118
+        width: 2140
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2a4f0a681ac4c20800000000000000
+      internalID: 3192103835496915708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_05
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 2118
+        width: 2177
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5923103b3efeacc80800000000000000
+      internalID: -8301559201864273259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_06
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 428
+        width: 2140
+        height: 1162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d3a54e3a9a7d880800000000000000
+      internalID: -8586207643182678769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fa9f0b2ba0ea8564da9b5b2cce1df87d
     internalID: 0
     vertices: []
     indices: 

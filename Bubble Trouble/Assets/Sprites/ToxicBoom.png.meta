@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 1113d2897ab60a8449061be9c8d45a87
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2897160198460330620
+    second: ToxicBoom_00
+  - first:
+      213: -5138365430218725425
+    second: ToxicBoom_01
+  - first:
+      213: 1973887262056957505
+    second: ToxicBoom_02
+  - first:
+      213: -8204988590911447783
+    second: ToxicBoom_4
+  - first:
+      213: -7608926810078406858
+    second: ToxicBoom_03
+  - first:
+      213: 2055185908083158008
+    second: ToxicBoom_04
+  - first:
+      213: -7125970469670590005
+    second: ToxicBoom_05
+  - first:
+      213: 152213269738777595
+    second: ToxicBoom_03
+  - first:
+      213: 1191279232559802884
+    second: ToxicBoom_07
+  - first:
+      213: 4017365511996895090
+    second: ToxicBoom_08
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +143,200 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ToxicBoom_00
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 8200
+        width: 1330
+        height: 1329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d2f5936283bc7d0800000000000000
+      internalID: -2897160198460330620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_01
+      rect:
+        serializedVersion: 2
+        x: 3235
+        y: 7281
+        width: 2429
+        height: 2421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc76aad8ddbd0b8b0800000000000000
+      internalID: -5138365430218725425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_02
+      rect:
+        serializedVersion: 2
+        x: 7097
+        y: 7637
+        width: 1848
+        height: 1708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146c299b108a46b10800000000000000
+      internalID: 1973887262056957505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_03
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 4434
+        width: 2442
+        height: 2131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637945b4169a76690800000000000000
+      internalID: -7608926810078406858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_04
+      rect:
+        serializedVersion: 2
+        x: 4241
+        y: 4458
+        width: 2410
+        height: 2290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb6faec1bc758c10800000000000000
+      internalID: 2055185908083158008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_05
+      rect:
+        serializedVersion: 2
+        x: 7376
+        y: 4490
+        width: 2276
+        height: 2075
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc96c53ec977b1d90800000000000000
+      internalID: -7125970469670590005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_06
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 786
+        width: 2273
+        height: 1848
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb61e09925cc1200800000000000000
+      internalID: 152213269738777595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_07
+      rect:
+        serializedVersion: 2
+        x: 4241
+        y: 790
+        width: 2110
+        height: 1920
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ae60d7626488010800000000000000
+      internalID: 1191279232559802884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToxicBoom_08
+      rect:
+        serializedVersion: 2
+        x: 7376
+        y: 828
+        width: 2266
+        height: 1801
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fea73f5ac80c730800000000000000
+      internalID: 4017365511996895090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ac8e8d334c753947a71c85db14828d2
     internalID: 0
     vertices: []
     indices: 

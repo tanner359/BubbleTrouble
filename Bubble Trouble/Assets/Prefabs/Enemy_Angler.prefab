@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5223155116585675117}
   - component: {fileID: 8872088525134943996}
   m_Layer: 0
-  m_Name: AngryFishPieces_3
+  m_Name: AngryFishBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,6 +459,7 @@ MonoBehaviour:
   enemyType: 0
   locations: []
   speeds: []
+  rotate: 0
   attack: 0
   wander: 0
   move: 0

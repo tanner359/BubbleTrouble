@@ -1,7 +1,76 @@
 fileFormatVersion: 2
 guid: 4f342e764b02d664fa350a4d4d7347c2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8783034193918476144
+    second: FishBody_00
+  - first:
+      213: 1350360978071519943
+    second: AngryFishMouthAnimation_1
+  - first:
+      213: -3509360354313900920
+    second: FishBody_01
+  - first:
+      213: -3768426117971360075
+    second: AngryFishMouthAnimation_3
+  - first:
+      213: -5553895288597883635
+    second: FishBody_02
+  - first:
+      213: 6611140395775478016
+    second: AngryFishMouthAnimation_5
+  - first:
+      213: -7854877005667587041
+    second: AngryFishMouthAnimation_6
+  - first:
+      213: -8470438835849439800
+    second: FishBody_03
+  - first:
+      213: -4948796129321861019
+    second: AngryFishMouthAnimation_8
+  - first:
+      213: -8789446618025636747
+    second: FishBody_04
+  - first:
+      213: 6364430666458181789
+    second: AngryFishMouthAnimation_10
+  - first:
+      213: 6851449575737056620
+    second: FishBody_05
+  - first:
+      213: 6785759748664384931
+    second: AngryFishMouthAnimation_12
+  - first:
+      213: 6376741502831410376
+    second: AngryFishMouthAnimation_13
+  - first:
+      213: -8689288648629732776
+    second: AngryFishMouthAnimation_14
+  - first:
+      213: -4612110598702313527
+    second: AngryFishMouthAnimation_15
+  - first:
+      213: 3070237283869673993
+    second: AngryFishMouthAnimation_16
+  - first:
+      213: 7726079815308977763
+    second: FishBody_06
+  - first:
+      213: -6724585827776671611
+    second: AngryFishMouthAnimation_18
+  - first:
+      213: -68295029505474872
+    second: AngryFishMouthAnimation_19
+  - first:
+      213: -8601544125275700101
+    second: AngryFishMouthAnimation_20
+  - first:
+      213: -6642750852224209133
+    second: AngryFishMouthAnimation_21
+  - first:
+      213: -1490967456929271782
+    second: AngryFishMouthAnimation_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +182,263 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FishBody_00
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 5200
+        width: 1660
+        height: 1406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fbe9a901b93e970800000000000000
+      internalID: 8783034193918476144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_01
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 5135
+        width: 1637
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ce744e95f3c4fc0800000000000000
+      internalID: -3509360354313900920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_02
+      rect:
+        serializedVersion: 2
+        x: 5172
+        y: 5135
+        width: 1637
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05586b29a99ce2b0800000000000000
+      internalID: -5553895288597883635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_03
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2800
+        width: 1637
+        height: 1400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c55581d1c4f27a80800000000000000
+      internalID: -8470438835849439800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_04
+      rect:
+        serializedVersion: 2
+        x: 2686
+        y: 2932
+        width: 1637
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cc2509edc950680800000000000000
+      internalID: -8789446618025636747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_05
+      rect:
+        serializedVersion: 2
+        x: 5030
+        y: 2932
+        width: 1638
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dde4ea61d351f50800000000000000
+      internalID: 6851449575737056620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthAnimation_15
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1269
+        width: 930
+        height: 624
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfc883b8dd7effb0800000000000000
+      internalID: -4612110598702313527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthAnimation_16
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 1888
+        width: 724
+        height: 657
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a4639fa8cab9a20800000000000000
+      internalID: 3070237283869673993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishBody_06
+      rect:
+        serializedVersion: 2
+        x: 4979
+        y: 878
+        width: 1660
+        height: 1404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366aec158ac883b60800000000000000
+      internalID: 7726079815308977763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthAnimation_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 399
+        width: 470
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580deb961d87da2a0800000000000000
+      internalID: -6724585827776671611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthAnimation_20
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 269
+        width: 897
+        height: 535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b740815e03d21a880800000000000000
+      internalID: -8601544125275700101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AngryFishMouthAnimation_21
+      rect:
+        serializedVersion: 2
+        x: 2973
+        y: 439
+        width: 526
+        height: 1076
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fa0c17b4530d3a0800000000000000
+      internalID: -6642750852224209133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3cb84cd4e33a83e418f5fd09f0bbbf58
     internalID: 0
     vertices: []
     indices: 
