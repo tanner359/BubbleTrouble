@@ -57,6 +57,10 @@ public class BossHealthTest : MonoBehaviour
             bossHealthBarFill.fillAmount = currentBossHealthValue / maximumHealthValue;
             currentBossHealthValue = newBossHealthValue;
         }
+        if(bossEnemy == null)
+        {
+            Destroy(gameObject);
+        }
 
     }
 
