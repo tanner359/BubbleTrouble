@@ -30,6 +30,11 @@ public class PlayerController : MonoBehaviour
     Vector2 touchPos;
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Change Light");
+        }
+
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
@@ -45,15 +50,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (powerActive)
-        {
+        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr) {
             //possibly add a color filter for each powerup
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
                 hitForce = 50f;
-                Pipe.speedPwr = false;
-                powerActive = false;
+                Pipe.bubbleSpeedPwr = false;
+                Pipe.bubbleSpawnPwr = false;
             }
         }
 
@@ -64,9 +68,9 @@ public class PlayerController : MonoBehaviour
             animator.enabled = false;
             for(int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
                 transform.GetChild(i).gameObject.AddComponent<BoxCollider2D>();
-                transform.GetChild(i).GetComponent<Rigidbody2D>().AddForce(Vector2.one * 50f, ForceMode2D.Impulse);
+                Rigidbody2D rb = transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
+                rb.AddForce(Vector2.one * 30f, ForceMode2D.Impulse);
             }
         }
 
@@ -109,12 +113,12 @@ public class PlayerController : MonoBehaviour
     }
 
     float hitForce = 50f;
-    bool powerActive = false;
     public float timer;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
         {
+            Debug.Log("Bubble hit");
             collision.GetComponent<Bubble>().SetBubbleHit(true);
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
@@ -127,15 +131,16 @@ public class PlayerController : MonoBehaviour
         {
             hitForce = 150f;
             timer = 10f;
-            powerActive = true;
+            Pipe.bubbleSpeedPwr = true;
+            Pipe.bubbleSpawnPwr = false;
         }
 
         if (collision.gameObject.CompareTag("BubblePwrup"))
         {
             //Pipe.spawnDelay = 2f;
-            Pipe.speedPwr = true;
+            Pipe.bubbleSpawnPwr = true;
+            Pipe.bubbleSpeedPwr = false;
             timer = 10f;
-            powerActive = true;
         }
     }   
 }

@@ -2,17 +2,20 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(Enemy))]
+[CustomEditor(typeof(Enemy), true)]
 public class EnemyEditor : Editor
 {
 
     public Texture2D pointSprite;
-    public bool edit;
+    public bool edit = false;
     public float handleSize = 2;
     private Enemy lastInspected;
     private Enemy enemy;
     static Vector2 lastPos;
     Vector2 newPos;
+    Vector2 handlePos;
+
+
 
     public override void OnInspectorGUI()
     {
@@ -47,15 +50,12 @@ public class EnemyEditor : Editor
         if ((Enemy)target != lastInspected || enemy == null)
         {
             enemy = (Enemy)target;           
-            lastPos = enemy.transform.position;
-            Debug.Log("New target");
         }
 
         newPos = enemy.transform.position;     
         
-        if (edit || !enemy.attack)
+        if (edit)
         {
-            Debug.Log("edit");
             for (int i = 0; i < enemy.locations.Count; i++)
             {
                 Handles.color = Color.green;
@@ -66,10 +66,11 @@ public class EnemyEditor : Editor
                 else if (i > 0)
                 {
                     Handles.color = Color.yellow;
-                }
+                }                
 
                 EditorGUI.BeginChangeCheck();
-                Vector2 handlePos = Handles.FreeMoveHandle(enemy.locations[i], Quaternion.identity, handleSize, new Vector3(0, 0, 0), Handles.SphereHandleCap);               
+
+                handlePos = Handles.FreeMoveHandle(enemy.locations[i], Quaternion.identity, handleSize, new Vector3(0, 0, 0), Handles.SphereHandleCap);
 
                 if (i > enemy.speeds.Count - 1)
                 {
@@ -82,8 +83,11 @@ public class EnemyEditor : Editor
 
                 if (Event.current.type == EventType.Repaint)
                 {
+                    Debug.Log("Draw Handles");
                     Handles.Label(enemy.locations[0] + Vector2.up * 2.5f + Vector2.left * 2f, "START");
                     Handles.Label(enemy.locations[enemy.locations.Count - 1] + Vector2.up * 2.5f + Vector2.left * 2f, "STOP");
+
+                    
                     Handles.SphereHandleCap(i, enemy.locations[i], Quaternion.identity, handleSize, EventType.Repaint);
 
                     if (i + 1 < enemy.locations.Count)
@@ -100,20 +104,18 @@ public class EnemyEditor : Editor
                     enemy.locations[i] = handlePos;
                     enemy.UpdateValues();
                 }
-            }            
-            
-        }
+            }
 
-
-        if (newPos != lastPos && !enemy.attack)
-        {
-            Debug.Log("Position change");
-            for (int i = 0; i < enemy.locations.Count; i++)
+            if (enemy.locations[0] != (Vector2)enemy.transform.position && !enemy.attack)
             {
-                enemy.locations[i] = enemy.locations[i] + (newPos - lastPos);
+                Vector2 diff = (Vector2)enemy.transform.position - enemy.locations[0];
+                enemy.locations[0] = enemy.transform.position;
+
+                for (int i = 1; i < enemy.locations.Count; i++)
+                {
+                    enemy.locations[i] += diff;
+                }
             }
         }
-        lastPos = newPos;
-        lastInspected = enemy;
     }  
 }
