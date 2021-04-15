@@ -24,7 +24,19 @@ public class PlayerController : MonoBehaviour
         {
             tilt = Input.acceleration;
             Walk(tilt.x);
-        }     
+        }
+
+        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr)
+        {
+            //possibly add a color filter for each powerup
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                hitForce = 50f;
+                Pipe.bubbleSpeedPwr = false;
+                Pipe.bubbleSpawnPwr = false;
+            }
+        }
     }
 
     Vector2 touchPos;
@@ -48,18 +60,7 @@ public class PlayerController : MonoBehaviour
                     Swing();
                     break;
             }
-        }
-
-        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr) {
-            //possibly add a color filter for each powerup
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                hitForce = 50f;
-                Pipe.bubbleSpeedPwr = false;
-                Pipe.bubbleSpawnPwr = false;
-            }
-        }
+        }       
 
         if (Physics2D.OverlapCollider(GetComponent<BoxCollider2D>(), incomingDamageFilter, incomingColliders) > 0 && !Dead)
         {

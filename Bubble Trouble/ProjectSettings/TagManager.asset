@@ -11,6 +11,7 @@ TagManager:
   - ToxicPwrup
   - SpeedPwrup
   - BubblePwrup
+  - Canvas
   layers:
   - Default
   - TransparentFX
