@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -114,7 +115,9 @@ public class PlayerController : MonoBehaviour
     }
 
     float hitForce = 50f;
-    public float timer;
+    public static float timer;
+    public Image speedCooldown;
+    public Image spawnCooldown;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
@@ -133,15 +136,16 @@ public class PlayerController : MonoBehaviour
             hitForce = 150f;
             timer = 10f;
             Pipe.bubbleSpeedPwr = true;
-            Pipe.bubbleSpawnPwr = false;
+            //Pipe.bubbleSpawnPwr = false;
+            speedCooldown.gameObject.SetActive(true);
         }
 
         if (collision.gameObject.CompareTag("BubblePwrup"))
         {
-            //Pipe.spawnDelay = 2f;
             Pipe.bubbleSpawnPwr = true;
-            Pipe.bubbleSpeedPwr = false;
+            //Pipe.bubbleSpeedPwr = false;
             timer = 10f;
+            spawnCooldown.gameObject.SetActive(true);
         }
     }   
 }

@@ -10,13 +10,13 @@ public class Bubble : MonoBehaviour
     public bool wasHit = false;
     public AudioClip pop;
     public Sprite[] sprites;
-    SpriteRenderer sr;
+    //SpriteRenderer sr;
 
-    private void Awake()
+/*    private void Awake()
     {
         if (Pipe.bubbleSpawnPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[0]; }
         if (Pipe.bubbleSpeedPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[1]; }
-    }
+    }*/
 
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
