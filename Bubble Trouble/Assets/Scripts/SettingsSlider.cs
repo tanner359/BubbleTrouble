@@ -6,23 +6,27 @@ using TMPro;
 
 public class SettingsSlider : MonoBehaviour
 {
-    public double floatSliderValue; 
-    public int sliderValue; //int holding the specific number of the value 
-    public TextMeshProUGUI sliderValueText; //text displaying volume Value; 
-    public Slider settingsSlider;
+    public Slider volume_S, sensitivity_S;
+    public TMPro.TMP_Text volumeNum, sensitivityNum;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    volumeSlider = GameObject.Find("VolumeSlider").GetComponent<Slider>();
-    //    sliderValueText = GameObject.Find("VolumeIndex").GetComponent<TextMeshProUGUI>();
-    //}
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        floatSliderValue = settingsSlider.value * 100.0;
-        sliderValue = (int)floatSliderValue;
-        sliderValueText.text = sliderValue.ToString(); 
+        volume_S.value = Settings.volume;
+        sensitivity_S.value = Settings.sensitivity;
+
+        UpdateVolume();
+        UpdateSensitivity();
+    }
+
+    public void UpdateVolume()
+    {
+        Settings.ChangeVolume((int)volume_S.value);
+        volumeNum.text = volume_S.value.ToString();
+    }
+
+    public void UpdateSensitivity()
+    {
+        Settings.ChangeSensitivity((int)sensitivity_S.value);
+        sensitivityNum.text = sensitivity_S.value.ToString();
     }
 }

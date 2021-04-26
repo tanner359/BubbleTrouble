@@ -59,7 +59,7 @@ public class Bubble : MonoBehaviour
 
     private void OnDestroy()
     {
-        AudioSource.PlayClipAtPoint(pop, transform.position);
+        AudioSource.PlayClipAtPoint(pop, transform.position, Settings.volume);
     }
 
 }

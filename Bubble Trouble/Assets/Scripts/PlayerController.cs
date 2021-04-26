@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-    public float movementSpeed;
+    //public float movementSpeed;
     public Launcher launcher;
     public ContactFilter2D incomingDamageFilter;
     List<Collider2D> incomingColliders = new List<Collider2D>();
@@ -100,12 +100,12 @@ public class PlayerController : MonoBehaviour
         if (direction <= -0.10f)
         {
             animator.SetBool("Walk", true);           
-            rb.velocity = new Vector2(-1 * movementSpeed * Mathf.Abs(direction), rb.velocity.y);
+            rb.velocity = new Vector2(-1 * Settings.sensitivity * Mathf.Abs(direction), rb.velocity.y);
         }
         else if (direction >= 0.10f)
         {
             animator.SetBool("Walk", true);
-            rb.velocity = new Vector2(1 * movementSpeed * Mathf.Abs(direction), rb.velocity.y);
+            rb.velocity = new Vector2(1 * Settings.sensitivity * Mathf.Abs(direction), rb.velocity.y);
         }
         else
         {
@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;
             bubbleRB.AddForce(direction * hitForce, ForceMode2D.Impulse);
             hitsound.pitch = Random.Range(0.65f, 1.0f);
+            hitsound.volume = Settings.volume / 100;
             hitsound.Play();
         }   
         
