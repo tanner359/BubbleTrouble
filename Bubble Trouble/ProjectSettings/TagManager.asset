@@ -10,8 +10,8 @@ TagManager:
   - Enemy
   - ToxicPwrup
   - SpeedPwrup
-  - BubblePwrup
   - Canvas
+  - SpawnPwrup
   layers:
   - Default
   - TransparentFX

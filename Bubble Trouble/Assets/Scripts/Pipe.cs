@@ -13,6 +13,7 @@ public class Pipe : MonoBehaviour
 
     public static bool bubbleSpeedPwr = false;
     public static bool bubbleSpawnPwr = false;
+    public static bool bubbleToxicPwr = false;
 
     private void Awake()
     {

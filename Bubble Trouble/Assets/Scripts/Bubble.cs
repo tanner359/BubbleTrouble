@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class Bubble : MonoBehaviour
 {
@@ -10,16 +11,19 @@ public class Bubble : MonoBehaviour
     public bool wasHit = false;
     public AudioClip pop;
     public Sprite[] sprites;
+    public static GameObject explosion;
     //SpriteRenderer sr;
 
-/*    private void Awake()
-    {
-        if (Pipe.bubbleSpawnPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[0]; }
-        if (Pipe.bubbleSpeedPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[1]; }
-    }*/
+    /*    private void Awake()
+        {
+            if (Pipe.bubbleSpawnPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[0]; }
+            if (Pipe.bubbleSpeedPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[1]; }
+        }*/
 
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
+
+    private void Start() { explosion = Resources.Load<GameObject>("Toxic Explosion"); }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {                
@@ -56,10 +60,9 @@ public class Bubble : MonoBehaviour
         }
     }
 
-
     private void OnDestroy()
     {
         AudioSource.PlayClipAtPoint(pop, transform.position, Settings.volume);
+        if (Pipe.bubbleToxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
     }
-
 }

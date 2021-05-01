@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
             Walk(tilt.x);
         }
 
-        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr)
+        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr || Pipe.bubbleToxicPwr)
         {
             //possibly add a color filter for each powerup
             timer -= Time.deltaTime;
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
                 hitForce = 50f;
                 Pipe.bubbleSpeedPwr = false;
                 Pipe.bubbleSpawnPwr = false;
+                Pipe.bubbleToxicPwr = false;
             }
         }
     }
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        Debug.Log(Pipe.bubbleSpawnPwr);
         //Debug.Log(Pipe.spawnDelay);
     }
     bool attack = false;
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
     public static float timer;
     public Image speedCooldown;
     public Image spawnCooldown;
+    public Image toxicCooldown;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
@@ -141,12 +144,35 @@ public class PlayerController : MonoBehaviour
             speedCooldown.gameObject.SetActive(true);
         }
 
-        if (collision.gameObject.CompareTag("BubblePwrup"))
+        if (collision.gameObject.CompareTag("SpawnPwrup"))
         {
             Pipe.bubbleSpawnPwr = true;
             //Pipe.bubbleSpeedPwr = false;
             timer = 10f;
             spawnCooldown.gameObject.SetActive(true);
+            //StartCoroutine(SpawnPwrup());
         }
-    }   
+
+        if (collision.gameObject.CompareTag("ToxicPwrup"))
+        {
+            Pipe.bubbleToxicPwr = true;
+            timer = 10f;
+            toxicCooldown.gameObject.SetActive(true);
+        }
+    }
+
+    /*#region Powerup Coroutines
+    IEnumerator SpawnPwrup()
+    {
+        if (!Pipe.bubbleSpawnPwr)
+        {
+            Pipe.bubbleSpawnPwr = true;
+            spawnCooldown.gameObject.SetActive(true);
+            Debug.Log("Coroutine thing happened");
+            yield return new WaitForSeconds(10f);
+        }
+        else Pipe.bubbleSpawnPwr = false;
+        Debug.Log("Coroutine over");
+    }
+    #endregion*/
 }
