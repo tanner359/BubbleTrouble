@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 81097bebc0a54e4429767bbaaa28ac01
-  - enabled: 1
-    path: Assets/Scenes/WorldSelectTest.unity
-    guid: cd260459a82d8e44a9a76f26efcb0bb0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
