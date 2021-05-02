@@ -236,9 +236,9 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Bubble"))
+        if (collision.CompareTag("Bubble") || collision.CompareTag("Explosion"))
         {
-            Destroy(collision.gameObject);
+            if (collision.CompareTag("Bubble")) Destroy(collision.gameObject);
             Health--;
             if(Health != 0)
             {

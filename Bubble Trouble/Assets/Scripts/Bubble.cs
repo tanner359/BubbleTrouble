@@ -10,15 +10,14 @@ public class Bubble : MonoBehaviour
     public Rigidbody2D rb;
     public bool wasHit = false;
     public AudioClip pop;
-    public Sprite[] sprites;
+    public Sprite toxicBubble;
     public static GameObject explosion;
-    //SpriteRenderer sr;
+    SpriteRenderer sr;
 
-    /*    private void Awake()
-        {
-            if (Pipe.bubbleSpawnPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[0]; }
-            if (Pipe.bubbleSpeedPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[1]; }
-        }*/
+    private void Awake()
+    {
+        if (Pipe.bubbleToxicPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = toxicBubble; }
+    }
 
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
