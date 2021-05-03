@@ -63,9 +63,6 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.one * 30f, ForceMode2D.Impulse);
             }
         }
-
-        Debug.Log(PowerupSystem.spawnPwr);
-        //Debug.Log(Pipe.spawnDelay);
     }
     bool attack = false;
     public void EnableAttack() { attack = true; }

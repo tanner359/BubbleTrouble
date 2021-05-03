@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
-    public enum Type { Toxic, Speed, Spawn };
+    public enum Type { Toxic, Speed, Spawn, Pierce };
     public Type powerupType;
     SpriteRenderer sr;
     ParticleSystem ps;

@@ -7,11 +7,13 @@ public static class PowerupSystem
 {
     public static bool spawnPwr = false;
     public static bool toxicPwr = false;
+    public static bool piercePwr = false;
 
     public static Transform cooldownShelf = GameObject.FindGameObjectWithTag("CooldownShelf").transform;
     public static GameObject spawnUI = Resources.Load<GameObject>("Cooldown UI/SpawnCooldownUI");
     public static GameObject toxicUI = Resources.Load<GameObject>("Cooldown UI/ToxicCooldownUI");
     public static GameObject speedUI = Resources.Load<GameObject>("Cooldown UI/SpeedCooldownUI");
+    public static GameObject pierceUI = Resources.Load<GameObject>("Cooldown UI/PierceCooldownUI");
 
     public static IEnumerator StartPowerup(Powerup.Type type)
     {
@@ -46,6 +48,16 @@ public static class PowerupSystem
                 yield return new WaitForSeconds(10f);
                 spawnPwr = false;
                 Debug.Log("Spawn effects 'ended'");
+                break;
+            case Powerup.Type.Pierce:
+                if (piercePwr) break;
+                piercePwr = true;
+                GameObject pierceIcon = Object.Instantiate(pierceUI, cooldownShelf);
+                pierceIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/PiercePwrupIcon");
+                Debug.Log("Pierce effects started");
+                yield return new WaitForSeconds(10f);
+                spawnPwr = false;
+                Debug.Log("Pierce effects 'ended'");
                 break;
         }
     }

@@ -238,7 +238,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Bubble") || collision.CompareTag("Explosion"))
         {
-            if (collision.CompareTag("Bubble")) Destroy(collision.gameObject);
+            if (collision.CompareTag("Bubble") && !PowerupSystem.piercePwr) Destroy(collision.gameObject);
             Health--;
             if(Health != 0)
             {
