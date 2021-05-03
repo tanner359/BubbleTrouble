@@ -48,7 +48,7 @@ public class Spawn : MonoBehaviour
                 for(int i = 0; i < wave1Enemies.Count; i++)
                 {
                     Instantiate(wave1Enemies[i].gameObject, wave1Enemies[i].spawnPoint.position, Quaternion.identity);                
-                    yield return new WaitForSeconds(numEnemiesSpawned+W1SpawnInterval/W1SpawnInterval);                   
+                    yield return new WaitForSeconds(W1SpawnInterval);                   
                 }
                 GameManager.instance.NextWave();
                 break;
@@ -57,7 +57,7 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < wave2Enemies.Count; i++)
                 {
                     Instantiate(wave2Enemies[i].gameObject, wave2Enemies[i].spawnPoint.position, Quaternion.identity);
-                    yield return new WaitForSeconds(numEnemiesSpawned+W2SpawnInterval/W2SpawnInterval);
+                    yield return new WaitForSeconds(W2SpawnInterval);
                 }
                 GameManager.instance.NextWave();
                 break;
@@ -66,7 +66,7 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < wave3Enemies.Count; i++)
                 {
                     Instantiate(wave3Enemies[i].gameObject, wave3Enemies[i].spawnPoint.position, Quaternion.identity);
-                    yield return new WaitForSeconds(numEnemiesSpawned +W3SpawnInterval/W3SpawnInterval);
+                    yield return new WaitForSeconds(W3SpawnInterval);
                 }
                 GameManager.instance.NextWave();
                 break;
