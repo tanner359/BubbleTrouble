@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c257f9f1ce7cadf43804e1d925395f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: 3
+  currentWave: 0
   roundBanner: {fileID: 1019277966}
 --- !u!4 &1454528665
 Transform:
