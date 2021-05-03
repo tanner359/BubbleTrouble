@@ -9,7 +9,7 @@ public static class PowerupSystem
     public static bool toxicPwr = false;
     public static bool piercePwr = false;
 
-    public static Transform cooldownShelf = GameObject.FindGameObjectWithTag("CooldownShelf").transform;
+    public static Transform cooldownShelf;
     public static GameObject spawnUI = Resources.Load<GameObject>("Cooldown UI/SpawnCooldownUI");
     public static GameObject toxicUI = Resources.Load<GameObject>("Cooldown UI/ToxicCooldownUI");
     public static GameObject speedUI = Resources.Load<GameObject>("Cooldown UI/SpeedCooldownUI");

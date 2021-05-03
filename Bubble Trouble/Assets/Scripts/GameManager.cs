@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        PowerupSystem.cooldownShelf = GameObject.FindGameObjectWithTag("CooldownShelf").transform;
+
         roundAnim = roundBanner.GetComponent<Animator>();
         roundImage = roundBanner.transform.Find("WaveText").GetComponent<Image>();
 
