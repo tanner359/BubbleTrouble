@@ -12,6 +12,8 @@ TagManager:
   - SpeedPwrup
   - Canvas
   - SpawnPwrup
+  - Explosion
+  - CooldownShelf
   layers:
   - Default
   - TransparentFX

@@ -456,7 +456,7 @@ MonoBehaviour:
   MAX_X: 0
   MIN_Y: 400
   MAX_Y: -1300
-  enemyType: 1
+  enemyType: 0
   locations: []
   speeds: []
   rotate: 0

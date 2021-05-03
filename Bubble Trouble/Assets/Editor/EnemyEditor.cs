@@ -40,7 +40,8 @@ public class EnemyEditor : Editor
 
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
-        GUILayout.EndArea();       
+        GUILayout.EndArea();
+       
     }
 
     public void OnSceneGUI()
