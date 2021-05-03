@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class Cooldown : MonoBehaviour
 {
     public Image cooldownTimer;
-    float cooldownTime = 10f;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        cooldownTime -= Time.deltaTime;
+        float cooldownTime = PlayerController.timer;
         cooldownTimer.fillAmount += .01f / cooldownTime;
-        if (cooldownTimer.fillAmount == 1) Destroy(gameObject);
+        if (cooldownTimer.fillAmount == 1) gameObject.SetActive(false);
     }
 }

@@ -10,14 +10,15 @@ public class Bubble : MonoBehaviour
     public Rigidbody2D rb;
     public bool wasHit = false;
     public AudioClip pop;
-    public Sprite toxicBubble;
+    public Sprite[] sprites;
     public static GameObject explosion;
-    SpriteRenderer sr;
+    //SpriteRenderer sr;
 
-    private void Awake()
-    {
-        if (PowerupSystem.toxicPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = toxicBubble; }
-    }
+    /*    private void Awake()
+        {
+            if (Pipe.bubbleSpawnPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[0]; }
+            if (Pipe.bubbleSpeedPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = sprites[1]; }
+        }*/
 
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
@@ -62,6 +63,6 @@ public class Bubble : MonoBehaviour
     private void OnDestroy()
     {
         AudioSource.PlayClipAtPoint(pop, transform.position, Settings.volume);
-        if (PowerupSystem.toxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
+        if (Pipe.bubbleToxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
     }
 }

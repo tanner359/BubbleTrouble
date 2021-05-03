@@ -4813,7 +4813,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4871,7 +4871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811f2de69a681d5459b89ddc77aea161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupType: 0
 --- !u!61 &3574281725069715503
 BoxCollider2D:
   m_ObjectHideFlags: 0
