@@ -12,10 +12,12 @@ public class Spawn : MonoBehaviour
     public float W1SpawnInterval;
     public float W2SpawnInterval;
     public float W3SpawnInterval;
+    public float ADSpawnInterval;
 
     public List<EnemyNode> wave1Enemies = new List<EnemyNode>();
     public List<EnemyNode> wave2Enemies = new List<EnemyNode>();
     public List<EnemyNode> wave3Enemies = new List<EnemyNode>();
+    public List<EnemyNode> bossAdds = new List<EnemyNode>();
     public EnemyNode Boss;
 
     public int numEnemiesSpawned = 0;
@@ -73,6 +75,17 @@ public class Spawn : MonoBehaviour
 
             case Wave.Boss:
                 Instantiate(Boss.gameObject, Boss.spawnPoint.position, Quaternion.identity);
+                yield return new WaitForSeconds(10);
+                for (int i = 0; i < bossAdds.Count; i++)
+                {
+                    Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    yield return new WaitForSeconds(1);
+                    Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    yield return new WaitForSeconds(1);
+                    Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    yield return new WaitForSeconds(ADSpawnInterval);
+                }
+                
                 break;
         }
     }

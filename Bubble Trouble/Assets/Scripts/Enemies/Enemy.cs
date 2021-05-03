@@ -206,11 +206,11 @@ public class Enemy : MonoBehaviour
 
         if (transform.rotation.eulerAngles.z > 90 && transform.rotation.eulerAngles.z < 270)
         {
-            transform.localScale = new Vector3(1, -1, 1);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), -Mathf.Abs(transform.localScale.y), Mathf.Abs(transform.localScale.z));
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y), Mathf.Abs(transform.localScale.z));
         }
     }
 
