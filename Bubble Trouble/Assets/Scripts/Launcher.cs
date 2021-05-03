@@ -6,18 +6,15 @@ using UnityEngine.SceneManagement;
 public class Launcher : MonoBehaviour
 {
     [SerializeField] public GameObject gameOverMenu;
-
+   
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
     }
-
     public void Quit()
     {
         Application.Quit();
     }
-
-    
     public void OpenMenu(GameObject menuToOpen)
     {
         menuToOpen.SetActive(true);   
@@ -26,7 +23,6 @@ public class Launcher : MonoBehaviour
     {
         menuToClose.SetActive(false);
     }
-
     public void PauseGame(bool state)
     {
         if (state)
@@ -38,7 +34,6 @@ public class Launcher : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-
     public void GameOver()
     {
         OpenMenu(gameOverMenu);
