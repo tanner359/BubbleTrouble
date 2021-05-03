@@ -26,19 +26,6 @@ public class PlayerController : MonoBehaviour
             tilt = Input.acceleration;
             Walk(tilt.x);
         }
-
-        if (Pipe.bubbleSpeedPwr || Pipe.bubbleSpawnPwr || Pipe.bubbleToxicPwr)
-        {
-            //possibly add a color filter for each powerup
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                hitForce = 50f;
-                Pipe.bubbleSpeedPwr = false;
-                Pipe.bubbleSpawnPwr = false;
-                Pipe.bubbleToxicPwr = false;
-            }
-        }
     }
 
     Vector2 touchPos;
@@ -77,7 +64,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        Debug.Log(Pipe.bubbleSpawnPwr);
+        Debug.Log(PowerupSystem.spawnPwr);
         //Debug.Log(Pipe.spawnDelay);
     }
     bool attack = false;
@@ -116,11 +103,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    float hitForce = 50f;
+    public static float hitForce = 50f;
     public static float timer;
-    public Image speedCooldown;
-    public Image spawnCooldown;
-    public Image toxicCooldown;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
@@ -133,46 +117,6 @@ public class PlayerController : MonoBehaviour
             hitsound.pitch = Random.Range(0.65f, 1.0f);
             hitsound.volume = Settings.volume / 100;
             hitsound.Play();
-        }   
-        
-        if (collision.gameObject.CompareTag("SpeedPwrup"))
-        {
-            hitForce = 150f;
-            timer = 10f;
-            Pipe.bubbleSpeedPwr = true;
-            //Pipe.bubbleSpawnPwr = false;
-            speedCooldown.gameObject.SetActive(true);
-        }
-
-        if (collision.gameObject.CompareTag("SpawnPwrup"))
-        {
-            Pipe.bubbleSpawnPwr = true;
-            //Pipe.bubbleSpeedPwr = false;
-            timer = 10f;
-            spawnCooldown.gameObject.SetActive(true);
-            //StartCoroutine(SpawnPwrup());
-        }
-
-        if (collision.gameObject.CompareTag("ToxicPwrup"))
-        {
-            Pipe.bubbleToxicPwr = true;
-            timer = 10f;
-            toxicCooldown.gameObject.SetActive(true);
         }
     }
-
-    /*#region Powerup Coroutines
-    IEnumerator SpawnPwrup()
-    {
-        if (!Pipe.bubbleSpawnPwr)
-        {
-            Pipe.bubbleSpawnPwr = true;
-            spawnCooldown.gameObject.SetActive(true);
-            Debug.Log("Coroutine thing happened");
-            yield return new WaitForSeconds(10f);
-        }
-        else Pipe.bubbleSpawnPwr = false;
-        Debug.Log("Coroutine over");
-    }
-    #endregion*/
 }

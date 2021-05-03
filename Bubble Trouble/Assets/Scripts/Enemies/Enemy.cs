@@ -249,7 +249,7 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                ItemSpawning.SpawnRandom(transform.position);
+                PowerupSpawning.SpawnRandom(transform.position);
                 Destroy(gameObject);
             }            
         }
