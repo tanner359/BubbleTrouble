@@ -245,6 +245,7 @@ public class Enemy : MonoBehaviour
             {
                 for(int i = 0; i < renderers.Length; i++)
                 {
+                    StopCoroutine(DamageFlash(renderers[i], renderers[i].color, Color.red));
                     StartCoroutine(DamageFlash(renderers[i], renderers[i].color, Color.red));
                 }
             }

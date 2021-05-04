@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Angler : Enemy
 {
-    // add special function derived from enemy
-    public float newNumber = 0;
+    private void Awake()
+    {
+        GameProperties.ChangeWorldLightIntesity(2);
+    }
+
+    private void OnDestroy()
+    {
+        GameProperties.ChangeWorldLightIntesity(10);
+    }
 }

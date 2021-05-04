@@ -369,16 +369,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6429802167071461287}
   movementSpeed: 5
-  Health: 50
+  Health: 30
   MIN_X: 0
   MAX_X: 0
   MIN_Y: 1900
   MAX_Y: 0
   enemyType: 1
   locations:
-  - {x: 3.2709916, y: 23.585253}
-  - {x: 68.531784, y: 23.812632}
-  - {x: -53.910583, y: 23.58525}
+  - {x: -3.3530426, y: 26.427006}
+  - {x: 35.563984, y: 26.654387}
+  - {x: -37.002823, y: 26.427008}
   speeds:
   - 5
   - 5
@@ -775,7 +775,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.36
+      scalar: 2.62
       minScalar: 1
       maxCurve:
         serializedVersion: 2

@@ -1936,6 +1936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454528665}
   - component: {fileID: 1454528664}
+  - component: {fileID: 1454528666}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1971,6 +1972,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454528666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454528663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a597dc42ca478484f9a671799c8d43d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WorldLight: {fileID: 705507994}
 --- !u!1001 &1471733659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2094,7 +2108,7 @@ MonoBehaviour:
     spawnPoint: {fileID: 853395472}
   - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
     spawnPoint: {fileID: 1611526579}
-  - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
+  - gameObject: {fileID: 4424429394768041632, guid: 71bf7bd29f625b84da338142aa41100b, type: 3}
     spawnPoint: {fileID: 1611526579}
   wave2Enemies:
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
@@ -2107,7 +2121,7 @@ MonoBehaviour:
     spawnPoint: {fileID: 1780251418}
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
     spawnPoint: {fileID: 1611526579}
-  - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
+  - gameObject: {fileID: 4424429394768041632, guid: 71bf7bd29f625b84da338142aa41100b, type: 3}
     spawnPoint: {fileID: 853395472}
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
     spawnPoint: {fileID: 200912514}
@@ -2115,7 +2129,7 @@ MonoBehaviour:
     spawnPoint: {fileID: 2079142063}
   - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
     spawnPoint: {fileID: 1780251418}
-  - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
+  - gameObject: {fileID: 4424429394768041632, guid: 71bf7bd29f625b84da338142aa41100b, type: 3}
     spawnPoint: {fileID: 2079142063}
   wave3Enemies:
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
@@ -2128,7 +2142,7 @@ MonoBehaviour:
     spawnPoint: {fileID: 1780251418}
   - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
     spawnPoint: {fileID: 853395472}
-  - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
+  - gameObject: {fileID: 4424429394768041632, guid: 71bf7bd29f625b84da338142aa41100b, type: 3}
     spawnPoint: {fileID: 1611526579}
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
     spawnPoint: {fileID: 1611526579}
@@ -2140,7 +2154,7 @@ MonoBehaviour:
     spawnPoint: {fileID: 2079142063}
   - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
     spawnPoint: {fileID: 1780251418}
-  - gameObject: {fileID: 8600872223797928397, guid: 745ca21c73b8f0d479ce6733b89bbde2, type: 3}
+  - gameObject: {fileID: 4424429394768041632, guid: 71bf7bd29f625b84da338142aa41100b, type: 3}
     spawnPoint: {fileID: 2079142063}
   - gameObject: {fileID: 2899358879617767361, guid: fc2e4607bca556c4595bcf4edbf65a35, type: 3}
     spawnPoint: {fileID: 1780251418}

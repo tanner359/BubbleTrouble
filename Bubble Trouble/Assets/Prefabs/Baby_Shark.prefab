@@ -367,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6429802167071461287}
   movementSpeed: 5
-  Health: 50
+  Health: 5
   MIN_X: 0
   MAX_X: 0
   MIN_Y: 700
@@ -375,14 +375,16 @@ MonoBehaviour:
   enemyType: 1
   locations:
   - {x: 0, y: 0}
-  - {x: -7.683039, y: 6.123041}
-  - {x: 10.120276, y: 6.3257885}
-  - {x: -6.3185306, y: -13.8579}
+  - {x: -5.0691504, y: 4.1626263}
+  - {x: 7.2263303, y: 4.458727}
+  - {x: -0.22810829, y: -15.33956}
+  - {x: 0, y: 0}
   speeds:
-  - 5
-  - 5
-  - 5
-  - 5
+  - 20
+  - 20
+  - 20
+  - 20
+  - 10
   rotate: 1
   attack: 0
   wander: 0

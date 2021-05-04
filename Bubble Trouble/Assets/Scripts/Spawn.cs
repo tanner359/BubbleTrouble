@@ -79,9 +79,9 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < bossAdds.Count; i++)
                 {
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(2);
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(2);
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
                     yield return new WaitForSeconds(ADSpawnInterval);
                 }

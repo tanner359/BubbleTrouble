@@ -9,7 +9,7 @@ public class GamePropertyManager : MonoBehaviour
 
     private void Update()
     {
-        WorldLight.intensity = Mathf.Lerp(WorldLight.intensity, GameProperties.WorldLightIntesity, 2f);
+        WorldLight.intensity = Mathf.Lerp(WorldLight.intensity, GameProperties.WorldLightIntesity, 0.025f);
     }
 
 }
