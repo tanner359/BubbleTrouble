@@ -1956,7 +1956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c257f9f1ce7cadf43804e1d925395f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: 0
+  currentWave: 3
   roundBanner: {fileID: 1019277966}
 --- !u!4 &1454528665
 Transform:
@@ -2010,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.1425
+      value: -26.01281
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2250,7 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorAlignment: 3
-  anchor: {x: -19.6425, y: 0}
+  anchor: {x: -24.51281, y: 0}
   offset: {x: -1.5, y: -24}
 --- !u!1 &1758485102
 GameObject:
@@ -2837,7 +2837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorAlignment: 4
-  anchor: {x: 19.6425, y: 0}
+  anchor: {x: 24.51281, y: 0}
   offset: {x: 1.5, y: -24}
 --- !u!1 &2054136720
 GameObject:
@@ -3158,7 +3158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.1425
+      value: 26.01281
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.y

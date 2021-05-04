@@ -292,8 +292,8 @@ GameObject:
   - component: {fileID: 4452188757866876631}
   - component: {fileID: 5522726536804345428}
   - component: {fileID: 6916650876818640468}
-  - component: {fileID: 1181005857043059107}
   - component: {fileID: 2115994915994605594}
+  - component: {fileID: 8346564497659625298}
   m_Layer: 7
   m_Name: Boss_Shark
   m_TagString: Enemy
@@ -355,41 +355,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1181005857043059107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4452188757866876649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5c604389d016c4b8036de1e1039c07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 6429802167071461287}
-  movementSpeed: 5
-  Health: 30
-  MIN_X: 0
-  MAX_X: 0
-  MIN_Y: 1900
-  MAX_Y: 0
-  enemyType: 1
-  locations:
-  - {x: -3.3530426, y: 26.427006}
-  - {x: 35.563984, y: 26.654387}
-  - {x: -37.002823, y: 26.427008}
-  speeds:
-  - 5
-  - 5
-  - 5
-  rotate: 1
-  attack: 0
-  wander: 0
-  move: 0
-  follow: 0
-  triggerPosition: 1
-  player: {fileID: 0}
 --- !u!95 &2115994915994605594
 Animator:
   serializedVersion: 3
@@ -409,6 +374,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8346564497659625298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452188757866876649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b96ee11c80e7f48911d803c2db77a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 6429802167071461287}
+  movementSpeed: 5
+  Health: 1
+  MIN_X: 0
+  MAX_X: 0
+  MIN_Y: 1900
+  MAX_Y: 0
+  enemyType: 1
+  locations: []
+  speeds: []
+  rotate: 1
+  attack: 0
+  wander: 0
+  move: 0
+  follow: 0
+  triggerPosition: 1
+  player: {fileID: 0}
 --- !u!1 &4505532136836110320
 GameObject:
   m_ObjectHideFlags: 0
@@ -5484,7 +5478,7 @@ PrefabInstance:
     - target: {fileID: 6219123946610894430, guid: bdd32ff1cec70a1449244f44a1c61319, type: 3}
       propertyPath: bossEnemy
       value: 
-      objectReference: {fileID: 1181005857043059107}
+      objectReference: {fileID: 8346564497659625298}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd32ff1cec70a1449244f44a1c61319, type: 3}
 --- !u!224 &5482068927316516790 stripped

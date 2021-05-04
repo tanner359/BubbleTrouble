@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Launcher : MonoBehaviour
 {
+    public static Launcher instance;
+
     [SerializeField] public GameObject gameOverMenu;
-   
+
+    private void Awake()
+    {
+        instance = this; 
+    }
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
