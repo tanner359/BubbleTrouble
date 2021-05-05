@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public Rigidbody2D rb;
     public Animator animator;
     //public float movementSpeed;
@@ -13,6 +14,11 @@ public class PlayerController : MonoBehaviour
     List<Collider2D> incomingColliders = new List<Collider2D>();
 
     public AudioSource hitsound;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     bool Dead {get;set;}
 
@@ -100,8 +106,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public static float hitForce = 50f;
-    public static float timer;
+    public float hitForce = 50f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)

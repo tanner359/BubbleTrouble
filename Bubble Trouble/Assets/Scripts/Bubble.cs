@@ -4,8 +4,7 @@ using UnityEngine;
 using System.IO;
 
 public class Bubble : MonoBehaviour
-{
-
+{ 
     public Animator animator;
     public Rigidbody2D rb;
     public bool wasHit = false;

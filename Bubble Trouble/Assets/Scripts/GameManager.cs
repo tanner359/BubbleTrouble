@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void WorldCleared()
     {
         levelCleared = true;
+        PowerupSystem.PowerupClear();
         StartCoroutine(ExitScene());
     }
     public IEnumerator ActivateWaveBanner()

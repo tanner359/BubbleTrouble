@@ -30,13 +30,13 @@ public static class PowerupSystem
                 Debug.Log("Toxic effects ended");
                 break;
             case Powerup.Type.Speed:
-                if (PlayerController.hitForce > 51f) break;
+                if (PlayerController.instance.hitForce > 51f) break;
                 GameObject speedIcon = Object.Instantiate(speedUI, cooldownShelf);
                 speedIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/SpeedPwrupIcon");
-                PlayerController.hitForce += (PlayerController.hitForce * 2f);
+                PlayerController.instance.hitForce += (PlayerController.instance.hitForce * 2f);
                 Debug.Log("Speed effects started");
                 yield return new WaitForSeconds(10f);
-                PlayerController.hitForce = 50f;
+                PlayerController.instance.hitForce = 50f;
                 Debug.Log("Speed effects ended");
                 break;
             case Powerup.Type.Spawn:
@@ -47,7 +47,7 @@ public static class PowerupSystem
                 Debug.Log("Spawn effects started");
                 yield return new WaitForSeconds(10f);
                 spawnPwr = false;
-                Debug.Log("Spawn effects 'ended'");
+                Debug.Log("Spawn effects ended");
                 break;
             case Powerup.Type.Pierce:
                 if (piercePwr) break;
@@ -56,34 +56,18 @@ public static class PowerupSystem
                 pierceIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/PiercePwrupIcon");
                 Debug.Log("Pierce effects started");
                 yield return new WaitForSeconds(10f);
-                spawnPwr = false;
-                Debug.Log("Pierce effects 'ended'");
+                piercePwr = false;
+                Debug.Log("Pierce effects ended");
                 break;
         }
     }
 
-/*    if (collision.gameObject.CompareTag("SpeedPwrup"))
+    public static void PowerupClear()
     {
-        hitForce = 150f;
-        timer = 10f;
-        Pipe.bubbleSpeedPwr = true;
-        //Pipe.bubbleSpawnPwr = false;
-        speedCooldown.gameObject.SetActive(true);
+        toxicPwr = false; PlayerController.instance.hitForce = 50f; spawnPwr = false; piercePwr = false;
+        if (spawnUI.activeSelf) Object.DestroyImmediate(spawnUI);
+        if (toxicUI.activeSelf) Object.DestroyImmediate(toxicUI);
+        if (speedUI.activeSelf) Object.DestroyImmediate(speedUI);
+        if (pierceUI.activeSelf) Object.DestroyImmediate(pierceUI);
     }
-
-    if (collision.gameObject.CompareTag("SpawnPwrup"))
-    {
-        *//*Pipe.bubbleSpawnPwr = true;
-        //Pipe.bubbleSpeedPwr = false;
-        timer = 10f;
-        spawnCooldown.gameObject.SetActive(true);*//*
-        StartCoroutine(SpawnPwrup());
-    }
-
-    if (collision.gameObject.CompareTag("ToxicPwrup"))
-    {
-        Pipe.bubbleToxicPwr = true;
-        timer = 10f;
-        toxicCooldown.gameObject.SetActive(true);
-    }
-*/}
+}
