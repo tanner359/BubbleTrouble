@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     Animator roundAnim;
     Image roundImage;
 
+    //REFERENCE TO THE WORLD CLEAR BANNER
+    public GameObject WorldClearBanner;
+
     private void Awake()
     {
         instance = this;      
@@ -73,6 +76,10 @@ public class GameManager : MonoBehaviour
     public IEnumerator ExitScene()
     {
         PlayerData.UnlockWorld(Level_ID++);
+
+        //Activate the World Banner once the Boss is defeated.
+        WorldClearBanner.SetActive(true);
+
         yield return new WaitForSeconds(4f);
         GameProperties.ChangeWorldLightIntesity(0, 0.02f);
         yield return new WaitUntil(() => GamePropertyManager.instance.WorldLight.intensity <= 0.2f);
