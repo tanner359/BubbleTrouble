@@ -1974,7 +1974,7 @@ MonoBehaviour:
   levelCleared: 0
   currentWave: 3
   roundBanner: {fileID: 1019277966}
-  WorldClearBanner: {fileID: 0}
+  WorldClearBanner: {fileID: 959475973}
 --- !u!4 &1454528665
 Transform:
   m_ObjectHideFlags: 0
