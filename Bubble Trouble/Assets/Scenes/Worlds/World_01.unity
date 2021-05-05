@@ -1957,7 +1957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level_ID: 1
   levelCleared: 0
-  currentWave: 3
+  currentWave: 0
   roundBanner: {fileID: 1019277966}
 --- !u!4 &1454528665
 Transform:
@@ -2952,6 +2952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 1161745198}
+  CrossFade: {fileID: 0}
 --- !u!114 &2054136726
 MonoBehaviour:
   m_ObjectHideFlags: 0
