@@ -17,8 +17,6 @@ public static class PlayerData
         //Set index 0 (world 1) to true regardless
         //Then retrieve the data from the list to see which is true and false 
         worlds[worldNumber - 1] = true;
-
-
     }
 
 }

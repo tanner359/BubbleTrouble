@@ -75,8 +75,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ExitScene()
     {
-        PlayerData.UnlockWorld(Level_ID++);
-
+        PlayerData.UnlockWorld(Level_ID + 1);
         //Activate the World Banner once the Boss is defeated.
         WorldClearBanner.SetActive(true);
 

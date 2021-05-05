@@ -12,7 +12,7 @@ public static class PowerupSpawning
     {
         float i = Random.Range(0f, 1f);
         if (i <= spawnChance) {
-            Object.Instantiate(powerups[Random.Range(0, powerups.Length - 1)], pos, Quaternion.identity);
+            Object.Instantiate(powerups[Random.Range(0, powerups.Length)], pos, Quaternion.identity);
             
             spawnChance = 0.05f;
         }
