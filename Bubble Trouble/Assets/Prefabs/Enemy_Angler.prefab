@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6455028260748285934}
   movementSpeed: 2
-  Health: 4
+  Health: 2
   MIN_X: 0
   MAX_X: 0
   MIN_Y: 700

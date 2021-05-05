@@ -76,6 +76,7 @@ public class Spawn : MonoBehaviour
             case Wave.Boss:
                 Instantiate(Boss.gameObject, Boss.spawnPoint.position, Quaternion.identity);
                 yield return new WaitForSeconds(10);
+                if(GameManager.instance.levelCleared == true) { break; }
                 for (int i = 0; i < bossAdds.Count; i++)
                 {
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);

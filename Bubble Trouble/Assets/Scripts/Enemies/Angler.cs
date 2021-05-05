@@ -6,11 +6,11 @@ public class Angler : Enemy
 {
     private void Awake()
     {
-        GameProperties.ChangeWorldLightIntesity(2);
+        GameProperties.ChangeWorldLightIntesity(2, 0.025f);
     }
 
     private void OnDestroy()
     {
-        GameProperties.ChangeWorldLightIntesity(10);
+        GameProperties.ChangeWorldLightIntesity(10, 0.025f);
     }
 }

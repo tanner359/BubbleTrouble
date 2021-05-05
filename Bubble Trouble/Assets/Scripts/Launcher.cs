@@ -8,6 +8,7 @@ public class Launcher : MonoBehaviour
     public static Launcher instance;
 
     [SerializeField] public GameObject gameOverMenu;
+    public GameObject CrossFade;
 
     private void Awake()
     {

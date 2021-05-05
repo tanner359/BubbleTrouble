@@ -7,7 +7,7 @@ using UnityEngine;
 public static class PlayerData
 {
     //List of the worlds in the game, checks to see if the player has beaten the world or not 
-    [SerializeField] public static List<bool> worlds = new List<bool>();
+    [SerializeField] public static bool[] worlds = { true, false, false };
 
         //When you complete a world, go through the list, set the next world's lock GameObject to be false
     

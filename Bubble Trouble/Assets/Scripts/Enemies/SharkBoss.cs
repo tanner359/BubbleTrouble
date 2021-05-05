@@ -4,9 +4,7 @@ public class SharkBoss : Enemy
     private void OnDestroy()
     {
         //INSERT WORLD CLEAR ANIMATION/BANNER HERE
-
-        PlayerData.UnlockWorld(2);
-        Launcher.instance.LoadLevel(1);
+        GameManager.instance.WorldCleared();
     }
 
     ////Wait a few seconds before unlocking the world and loading back to the World Select 

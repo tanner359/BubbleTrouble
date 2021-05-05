@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int Level_ID;
+    public bool levelCleared;
+
     public Spawn.Wave currentWave;
 
     public GameObject roundBanner;
@@ -27,13 +30,17 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(ActivateWaveBanner());
     }
-
     public void NextWave()
     {
         currentWave++;
         StartCoroutine(ActivateWaveBanner());
     }
 
+    public void WorldCleared()
+    {
+        levelCleared = true;
+        StartCoroutine(ExitScene());
+    }
     public IEnumerator ActivateWaveBanner()
     {
         switch (currentWave)
@@ -61,6 +68,15 @@ public class GameManager : MonoBehaviour
         roundBanner.SetActive(false);
 
         Spawn.instance.StartWave(currentWave);
+    }
+
+    public IEnumerator ExitScene()
+    {
+        PlayerData.UnlockWorld(Level_ID++);
+        yield return new WaitForSeconds(4f);
+        GameProperties.ChangeWorldLightIntesity(0, 0.02f);
+        yield return new WaitUntil(() => GamePropertyManager.instance.WorldLight.intensity <= 0.2f);
+        Launcher.instance.LoadLevel(1);
     }
 
 }

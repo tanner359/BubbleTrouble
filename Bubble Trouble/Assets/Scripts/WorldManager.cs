@@ -18,7 +18,7 @@ public class WorldManager : MonoBehaviour
     {
         //Go through each world
         //If the world was beaten, disable that lock
-        for(int i = 0; i < PlayerData.worlds.Count; i++)
+        for(int i = 0; i < PlayerData.worlds.Length; i++)
         {
             if(PlayerData.worlds[i] == true)
             {
