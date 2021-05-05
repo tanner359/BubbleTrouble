@@ -14,10 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Worlds/World_01.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/ZachTestScene.unity
-    guid: c3edb1ed0812a1c459dc65935ac5a4a8
-  - enabled: 0
-    path: Assets/Scenes/JadenTestScene.unity
-    guid: e03b667bf03d8114ebbf71955a884dee
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_02.unity
+    guid: e200db0821fdbe449af514907afe526c
   m_configObjects: {}
