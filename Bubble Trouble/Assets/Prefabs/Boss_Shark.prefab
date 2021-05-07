@@ -389,10 +389,10 @@ MonoBehaviour:
   body: {fileID: 6429802167071461287}
   movementSpeed: 5
   Health: 30
-  MIN_X: 0
-  MAX_X: 0
-  MIN_Y: 1900
-  MAX_Y: 0
+  Bottom_L: {x: -19.636166, y: 23.851265}
+  Top_L: {x: -19.43055, y: 42.048126}
+  Bottom_R: {x: 19.430557, y: 23.028805}
+  Top_R: {x: 20.047398, y: 42.048126}
   enemyType: 1
   locations:
   - {x: 0, y: 0}
@@ -5272,7 +5272,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1261141535
   m_SortingLayer: 5
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

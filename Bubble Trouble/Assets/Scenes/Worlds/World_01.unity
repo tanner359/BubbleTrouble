@@ -1934,7 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level_ID: 1
   levelCleared: 0
-  currentWave: 0
+  currentWave: 3
   roundBanner: {fileID: 1019277966}
   WorldClearBanner: {fileID: 1325011737}
 --- !u!4 &1454528665
