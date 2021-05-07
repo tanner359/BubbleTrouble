@@ -471,10 +471,10 @@ MonoBehaviour:
   body: {fileID: 6455028260748285934}
   movementSpeed: 2
   Health: 2
-  MIN_X: 0
-  MAX_X: 0
-  MIN_Y: 700
-  MAX_Y: 0
+  Bottom_L: {x: -19.86132, y: 5.6678605}
+  Top_L: {x: -19.670307, y: 43.89598}
+  Bottom_R: {x: 19.565277, y: 5.6678605}
+  Top_R: {x: 19.775333, y: 43.739357}
   enemyType: 1
   locations:
   - {x: 5.994227, y: 20.070631}
