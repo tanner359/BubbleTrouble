@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour
     public Vector2 Top_R;
     Vector2 TR_Offset;
 
-    Vector2 leftAnchorStart;
-    Vector2 rightAnchorStart;
+    Vector2 leftRefAnchor;
+    Vector2 rightRefAnchor;
 
     [Space(10)]
     [Header("AI Movement")]
@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
 
     public GameObject player;
 
-
     private void Start()
     {
         BL_Offset = Bottom_L;
@@ -62,8 +61,8 @@ public class Enemy : MonoBehaviour
         BR_Offset = Bottom_R;
         TR_Offset = Top_R;
 
-        leftAnchorStart = Camera.main.ScreenToWorldPoint(new Vector3(0, 2400f / 2, Camera.main.transform.position.z));
-        rightAnchorStart = Camera.main.ScreenToWorldPoint(new Vector3(1080f, 2400f / 2, Camera.main.transform.position.z));
+        leftRefAnchor = Camera.main.ScreenToWorldPoint(new Vector3(0, 2400f / 2, Camera.main.transform.position.z));
+        rightRefAnchor = Camera.main.ScreenToWorldPoint(new Vector3(1080f, 2400f / 2, Camera.main.transform.position.z));
 
         player = GameObject.FindGameObjectWithTag("Player");
         renderers = body.GetComponentsInChildren<SpriteRenderer>();
@@ -86,17 +85,19 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log("BL Offset " + BL_Offset);
+        Debug.Log("L Anchor: " + leftRefAnchor);
         #region BOUNDRY SCREEN SCALE
         Vector2 leftAnchor = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height / 2, Camera.main.transform.position.z));
         Vector2 rightAnchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height / 2, Camera.main.transform.position.z));
 
-        Bottom_L =  new Vector2(leftAnchor.x + (BL_Offset.x - leftAnchorStart.x), BL_Offset.y);
+        Bottom_L =  new Vector2(leftAnchor.x + (BL_Offset.x - leftRefAnchor.x), BL_Offset.y);
 
-        Bottom_R = new Vector2(rightAnchor.x + (BR_Offset.x - rightAnchorStart.x), BR_Offset.y);
+        Bottom_R = new Vector2(rightAnchor.x + (BR_Offset.x - rightRefAnchor.x), BR_Offset.y);
 
-        Top_L = new Vector2(leftAnchor.x + (TL_Offset.x - leftAnchorStart.x), TL_Offset.y);
+        Top_L = new Vector2(leftAnchor.x + (TL_Offset.x - leftRefAnchor.x), TL_Offset.y);
 
-        Top_R = new Vector2(rightAnchor.x + (TR_Offset.x - rightAnchorStart.x), TR_Offset.y);
+        Top_R = new Vector2(rightAnchor.x + (TR_Offset.x - rightRefAnchor.x), TR_Offset.y);
 
         #endregion
 
@@ -289,10 +290,9 @@ public class Enemy : MonoBehaviour
             Health--;
             if(Health != 0)
             {
-                for(int i = 0; i < renderers.Length; i++)
+                if (healthFlash == false)
                 {
-                    StopCoroutine(DamageFlash(renderers[i], renderers[i].color, Color.red));
-                    StartCoroutine(DamageFlash(renderers[i], renderers[i].color, Color.red));
+                    StartCoroutine(DamageFlash(renderers, renderers[0].color, Color.red));
                 }
             }
             else
@@ -303,10 +303,19 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public IEnumerator DamageFlash(SpriteRenderer renderer, Color origin, Color change)
+    public bool healthFlash;
+    public IEnumerator DamageFlash(SpriteRenderer[] renderers, Color origin, Color change)
     {
-        renderer.color = change;
+        healthFlash = true;
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].color = change;  
+        }
         yield return new WaitForSeconds(0.1f);
-        renderer.color = origin;
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].color = origin;
+        }
+        healthFlash = false;
     }   
 }

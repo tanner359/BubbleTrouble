@@ -65,9 +65,9 @@ public static class PowerupSystem
     public static void PowerupClear()
     {
         toxicPwr = false; PlayerController.instance.hitForce = 50f; spawnPwr = false; piercePwr = false;
-        if (spawnUI.activeSelf) Object.DestroyImmediate(spawnUI);
-        if (toxicUI.activeSelf) Object.DestroyImmediate(toxicUI);
-        if (speedUI.activeSelf) Object.DestroyImmediate(speedUI);
-        if (pierceUI.activeSelf) Object.DestroyImmediate(pierceUI);
+        //if (spawnUI.activeSelf) Object.Destroy(spawnUI);
+        //if (toxicUI.activeSelf) Object.Destroy(toxicUI);
+        //if (speedUI.activeSelf) Object.Destroy(speedUI);
+        //if (pierceUI.activeSelf) Object.Destroy(pierceUI);
     }
 }
