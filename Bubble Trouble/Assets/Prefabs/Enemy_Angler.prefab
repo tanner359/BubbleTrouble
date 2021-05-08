@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6455028260748285934}
   movementSpeed: 2
-  Health: 2
+  Health: 3
   Bottom_L: {x: -19.86132, y: 5.6678605}
   Top_L: {x: -19.670307, y: 43.89598}
   Bottom_R: {x: 19.565277, y: 5.6678605}
@@ -487,6 +487,7 @@ MonoBehaviour:
   follow: 0
   triggerPosition: 1
   player: {fileID: 0}
+  healthFlash: 0
 --- !u!1 &5028827429480037705
 GameObject:
   m_ObjectHideFlags: 0
