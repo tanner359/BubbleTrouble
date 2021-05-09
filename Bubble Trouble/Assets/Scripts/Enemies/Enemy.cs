@@ -85,8 +85,6 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log("BL Offset " + BL_Offset);
-        Debug.Log("L Anchor: " + leftRefAnchor);
         #region BOUNDRY SCREEN SCALE
         Vector2 leftAnchor = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height / 2, Camera.main.transform.position.z));
         Vector2 rightAnchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height / 2, Camera.main.transform.position.z));
@@ -298,6 +296,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 PowerupSpawning.SpawnRandom(transform.position);
+                Spawn.instance.numEnemiesSpawned--;
                 Destroy(gameObject);
             }            
         }

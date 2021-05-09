@@ -80,10 +80,7 @@ public class GameManager : MonoBehaviour
         PlayerData.UnlockWorld(Level_ID + 1);
         //Activate the World Banner once the Boss is defeated.
         WorldClearBanner.SetActive(true);
-
         yield return new WaitForSeconds(4f);
-        GameProperties.ChangeWorldLightIntesity(0, 0.02f);
-        yield return new WaitUntil(() => GamePropertyManager.instance.WorldLight.intensity <= 0.2f);
         Launcher.instance.LoadLevel(1);
     }
 

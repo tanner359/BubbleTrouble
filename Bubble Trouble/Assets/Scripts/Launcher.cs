@@ -8,16 +8,26 @@ public class Launcher : MonoBehaviour
     public static Launcher instance;
 
     [SerializeField] public GameObject gameOverMenu;
-    public GameObject CrossFade;
+    public Animator CrossFade;
+    public bool isLoading = false;
 
     private void Awake()
     {
-        instance = this; 
+        instance = this;
+        FadeIn();
     }
     public void LoadLevel(int level)
     {
+        StartCoroutine(Load(level));
+    }
+
+    public IEnumerator Load(int level)
+    {
+        FadeOut();
+        yield return new WaitUntil(() => isLoading == true);
         SceneManager.LoadScene(level);
     }
+
     public void Quit()
     {
         Application.Quit();
@@ -45,5 +55,13 @@ public class Launcher : MonoBehaviour
     {
         OpenMenu(gameOverMenu);
         gameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
+    }
+    public void FadeOut()
+    {
+        CrossFade.SetTrigger("FadeOut");
+    }
+    public void FadeIn()
+    {
+        CrossFade.SetTrigger("FadeIn");
     }
 }

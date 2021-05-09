@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 70d28ed6dab5c4e45a0e4b1d90a07513
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1687611817489774716
+    second: BubblePurpleCoralPieces_0
+  - first:
+      213: -8066068186797415266
+    second: BubblePurpleCoralPieces_1
+  - first:
+      213: -6359018899077529383
+    second: BubblePurpleCoralPieces_2
+  - first:
+      213: -3065283043485426331
+    second: BubblePurpleCoralPieces_3
+  - first:
+      213: 28508074380980177
+    second: BubblePurpleCoralPieces_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,11 +140,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BubblePurpleCoralPieces_0
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1098
+        width: 674
+        height: 1775
+      alignment: 9
+      pivot: {x: 0.69507027, y: 0.0098200925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48745cb4ef56498e0800000000000000
+      internalID: -1687611817489774716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubblePurpleCoralPieces_1
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1232
+        width: 497
+        height: 754
+      alignment: 9
+      pivot: {x: 0.39885184, y: 0.0179105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e946cdf48b19f0090800000000000000
+      internalID: -8066068186797415266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubblePurpleCoralPieces_2
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1098
+        width: 693
+        height: 1876
+      alignment: 9
+      pivot: {x: 0.2767984, y: 0.009413599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d00d78b00a30c7a0800000000000000
+      internalID: -6359018899077529383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubblePurpleCoralPieces_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 173
+        width: 1061
+        height: 925
+      alignment: 9
+      pivot: {x: 0.98838353, y: 0.01924082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56dd501005de575d0800000000000000
+      internalID: -3065283043485426331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubblePurpleCoralPieces_4
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 90
+        width: 1046
+        height: 944
+      alignment: 9
+      pivot: {x: 0.0046133474, y: 0.0043389434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df65be41f7456000800000000000000
+      internalID: 28508074380980177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1c2ea14914f2b5d43b3de7b5e8490207
     internalID: 0
     vertices: []
     indices: 

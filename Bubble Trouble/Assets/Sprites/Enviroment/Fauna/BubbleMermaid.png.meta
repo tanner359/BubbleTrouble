@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 757718beab8077c4e83efdd7b979ed72
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1337970694048627958
+    second: Mermaid_00
+  - first:
+      213: -8469500264001576752
+    second: Mermaid_01
+  - first:
+      213: 2464709012514384970
+    second: Mermaid_02
+  - first:
+      213: -4308463620967729501
+    second: Mermaid_03
+  - first:
+      213: -7313013254740146424
+    second: BubbleMermaid_10
+  - first:
+      213: 6115631310142672377
+    second: BubbleMermaid_11
+  - first:
+      213: 3389333193000929069
+    second: Mermaid_05
+  - first:
+      213: 2107850639916628674
+    second: BubbleMermaid_13
+  - first:
+      213: 4627375648651653007
+    second: Mermaid_04
+  - first:
+      213: -2015386702670936509
+    second: BubbleMermaid_15
+  - first:
+      213: 3282602231360028144
+    second: Mermaid_06
+  - first:
+      213: -3887961562501768008
+    second: Mermaid_07
+  - first:
+      213: -8053761543746775178
+    second: Mermaid_09
+  - first:
+      213: -3083025326502782417
+    second: Mermaid_08
+  - first:
+      213: -7274513442982645600
+    second: Mermaid_10
+  - first:
+      213: 4187257554494009127
+    second: Mermaid_11
+  - first:
+      213: 165798756493607725
+    second: Mermaid_12
+  - first:
+      213: -1948192980706783607
+    second: Mermaid_13
+  - first:
+      213: -6862412519605647627
+    second: Mermaid_15
+  - first:
+      213: -710097867036883645
+    second: Mermaid_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +173,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mermaid_00
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 5873
+        width: 1755
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03495d1eb29e6de0800000000000000
+      internalID: -1337970694048627958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_01
+      rect:
+        serializedVersion: 2
+        x: 3830
+        y: 5856
+        width: 1655
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0eb1b126a467a80800000000000000
+      internalID: -8469500264001576752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_02
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 5066
+        width: 1774
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4caf9dc9c7643220800000000000000
+      internalID: 2464709012514384970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_03
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 5078
+        width: 1963
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a67688f9234534c0800000000000000
+      internalID: -4308463620967729501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_05
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 4255
+        width: 1979
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27c242e494590f20800000000000000
+      internalID: 3389333193000929069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_04
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 4142
+        width: 2014
+        height: 515
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fac24b2adb73040800000000000000
+      internalID: 4627375648651653007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_06
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 3406
+        width: 2052
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd7e1366552e8d20800000000000000
+      internalID: 3282602231360028144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_07
+      rect:
+        serializedVersion: 2
+        x: 3610
+        y: 3297
+        width: 2056
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc95b6ee8f2b0ac0800000000000000
+      internalID: -3887961562501768008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_09
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2497
+        width: 2013
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677954feb8a4b3090800000000000000
+      internalID: -8053761543746775178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_08
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2497
+        width: 1879
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ad444dcc4e635d0800000000000000
+      internalID: -3083025326502782417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_10
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1769
+        width: 2115
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0373dc09cbb0b90800000000000000
+      internalID: -7274513442982645600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_11
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 1639
+        width: 2047
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fafae8f802c1a30800000000000000
+      internalID: 4187257554494009127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 710
+        width: 1885
+        height: 722
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23c00137190d4200800000000000000
+      internalID: 165798756493607725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_13
+      rect:
+        serializedVersion: 2
+        x: 3362
+        y: 813
+        width: 1920
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e00175ec0a6f4e0800000000000000
+      internalID: -1948192980706783607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_15
+      rect:
+        serializedVersion: 2
+        x: 3610
+        y: 225
+        width: 1796
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f646ba0c20d3c0a0800000000000000
+      internalID: -6862412519605647627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid_14
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 236
+        width: 2054
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345018f80c93526f0800000000000000
+      internalID: -710097867036883645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

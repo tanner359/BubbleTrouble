@@ -37,11 +37,6 @@ public class Spawn : MonoBehaviour
         StartCoroutine(SpawnEnemy(wave));
     }
 
-    public void Update()
-    {
-        numEnemiesSpawned = GameObject.FindGameObjectsWithTag("Enemy").Length;
-    }
-
     public IEnumerator SpawnEnemy(Wave wave)
     {
         switch (wave)
@@ -49,7 +44,8 @@ public class Spawn : MonoBehaviour
             case Wave.Wave_1:
                 for(int i = 0; i < wave1Enemies.Count; i++)
                 {
-                    Instantiate(wave1Enemies[i].gameObject, wave1Enemies[i].spawnPoint.position, Quaternion.identity);                
+                    Instantiate(wave1Enemies[i].gameObject, wave1Enemies[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(W1SpawnInterval);                   
                 }
                 GameManager.instance.NextWave();
@@ -59,6 +55,7 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < wave2Enemies.Count; i++)
                 {
                     Instantiate(wave2Enemies[i].gameObject, wave2Enemies[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(W2SpawnInterval);
                 }
                 GameManager.instance.NextWave();
@@ -68,6 +65,7 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < wave3Enemies.Count; i++)
                 {
                     Instantiate(wave3Enemies[i].gameObject, wave3Enemies[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(W3SpawnInterval);
                 }
                 GameManager.instance.NextWave();
@@ -80,10 +78,13 @@ public class Spawn : MonoBehaviour
                 for (int i = 0; i < bossAdds.Count; i++)
                 {
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(2);
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(2);
                     Instantiate(bossAdds[i].gameObject, bossAdds[i].spawnPoint.position, Quaternion.identity);
+                    numEnemiesSpawned++;
                     yield return new WaitForSeconds(ADSpawnInterval);
                 }
                 
