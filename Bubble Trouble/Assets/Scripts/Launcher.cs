@@ -9,11 +9,16 @@ public class Launcher : MonoBehaviour
 
     [SerializeField] public GameObject gameOverMenu;
     public Animator CrossFade;
+    public Animator BubbleFade;
     public bool isLoading = false;
 
     private void Awake()
+    {       
+        instance = this;       
+    }
+    private void Start()
     {
-        instance = this;
+        BubbleFade = GameObject.Find("BubbleFade").GetComponent<Animator>();
         FadeIn();
     }
     public void LoadLevel(int level)
@@ -59,9 +64,11 @@ public class Launcher : MonoBehaviour
     public void FadeOut()
     {
         CrossFade.SetTrigger("FadeOut");
+        BubbleFade.SetTrigger("FadeOut");
     }
     public void FadeIn()
     {
         CrossFade.SetTrigger("FadeIn");
+        BubbleFade.SetTrigger("FadeIn");
     }
 }
