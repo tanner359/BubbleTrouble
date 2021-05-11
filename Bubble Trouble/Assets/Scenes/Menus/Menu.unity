@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorAlignment: 3
-  anchor: {x: -18, y: 1}
+  anchor: {x: -19.45946, y: 1}
   offset: {x: 0, y: -30}
 --- !u!1 &235569265
 GameObject:
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorAlignment: 4
-  anchor: {x: 18, y: 1}
+  anchor: {x: 19.45946, y: 1}
   offset: {x: 0, y: -30}
 --- !u!1 &555493787
 GameObject:
@@ -1455,7 +1455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18
+      value: 19.45946
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2597,7 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5628024965175793070, guid: 9b8583eed9e3deb4e95584c22e23fd06, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8583eed9e3deb4e95584c22e23fd06, type: 3}
@@ -2972,7 +2972,7 @@ MonoBehaviour:
   gameOverMenu: {fileID: 0}
   CrossFade: {fileID: 1509957358}
   BubbleFade: {fileID: 0}
-  isLoading: 0
+  completeLoad: 0
 --- !u!114 &1636010977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3983,7 +3983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18
+      value: -19.45946
       objectReference: {fileID: 0}
     - target: {fileID: 1660989883464513062, guid: c842b8f29c06fb04f9b12f97faa5752a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4103,8 +4103,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7933339503499414128, guid: dffc5c9fed9df71488bc37d2df9002ec, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 6
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933339503499414128, guid: dffc5c9fed9df71488bc37d2df9002ec, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffc5c9fed9df71488bc37d2df9002ec, type: 3}

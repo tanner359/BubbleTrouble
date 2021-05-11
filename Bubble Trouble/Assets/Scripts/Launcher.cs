@@ -10,7 +10,7 @@ public class Launcher : MonoBehaviour
     [SerializeField] public GameObject gameOverMenu;
     public Animator CrossFade;
     public Animator BubbleFade;
-    public bool isLoading = false;
+    public bool completeLoad = false;
 
     private void Awake()
     {       
@@ -18,8 +18,7 @@ public class Launcher : MonoBehaviour
     }
     private void Start()
     {
-        BubbleFade = GameObject.Find("BubbleFade").GetComponent<Animator>();
-        FadeIn();
+        BubbleFade = GameObject.Find("BubbleFade").GetComponent<Animator>();        
     }
     public void LoadLevel(int level)
     {
@@ -29,8 +28,36 @@ public class Launcher : MonoBehaviour
     public IEnumerator Load(int level)
     {
         FadeOut();
-        yield return new WaitUntil(() => isLoading == true);
-        SceneManager.LoadScene(level);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+        asyncLoad.allowSceneActivation = false;
+        while (!completeLoad)
+        {
+            yield return null;
+        }             
+        FadeIn();
+        yield return new WaitForSeconds(1f);
+        asyncLoad.allowSceneActivation = true;
+        completeLoad = false;
+    }
+
+    //public IEnumerator LoadAsyncScene(int level)
+    //{
+    //    // The Application loads the Scene in the background as the current Scene runs.
+    //    // This is particularly good for creating loading screens.
+    //    // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+    //    // a sceneBuildIndex of 1 as shown in Build Settings.
+
+    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+    //    // Wait until the asynchronous scene fully loads
+    //    while (!asyncLoad.isDone)
+    //    {
+    //        yield return null;
+    //    }
+    //}
+
+    public void RestartLevel()
+    {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()
