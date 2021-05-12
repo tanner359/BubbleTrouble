@@ -12,6 +12,9 @@ TagManager:
   - SpeedPwrup
   - Canvas
   - SpawnPwrup
+  - Explosion
+  - CooldownShelf
+  - PiercePwrup
   layers:
   - Default
   - TransparentFX
@@ -63,4 +66,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3033825761
+    locked: 0
+  - name: Particle
+    uniqueID: 3621699595
     locked: 0

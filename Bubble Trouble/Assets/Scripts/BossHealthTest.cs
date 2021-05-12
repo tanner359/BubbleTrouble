@@ -28,7 +28,7 @@ public class BossHealthTest : MonoBehaviour
     //As soon as this GameObject gets enabled, assign its transform to the canvas 
     private void OnEnable()
     {
-        transform.SetParent(GameObject.FindWithTag("Canvas").transform);   
+        transform.SetParent(GameObject.Find("HealthBarShelf").transform);   
     }
 
     // Start is called before the first frame update

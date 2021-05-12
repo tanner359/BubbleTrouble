@@ -16,7 +16,7 @@ public class GameObjectAnchor : MonoBehaviour
         switch (anchorAlignment)
         {
             case Alignment.Top:
-                anchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height, Camera.main.transform.position.z));
+                anchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height, Camera.main.transform.position.z));
                 break;
 
             case Alignment.Bottom:
@@ -32,7 +32,7 @@ public class GameObjectAnchor : MonoBehaviour
                 break;
 
             case Alignment.Center:
-                anchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, Camera.main.transform.position.z));
+                anchor = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height/2, Camera.main.transform.position.z));
                 break;
         }     
         transform.position = anchor + offset;       

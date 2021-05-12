@@ -4,8 +4,7 @@ using UnityEngine;
 using System.IO;
 
 public class Bubble : MonoBehaviour
-{
-
+{ 
     public Animator animator;
     public Rigidbody2D rb;
     public bool wasHit = false;
@@ -16,7 +15,7 @@ public class Bubble : MonoBehaviour
 
     private void Awake()
     {
-        if (Pipe.bubbleToxicPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = toxicBubble; }
+        if (PowerupSystem.toxicPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = toxicBubble; }
     }
 
     public bool WasBubbleHit(){return wasHit;}
@@ -62,6 +61,6 @@ public class Bubble : MonoBehaviour
     private void OnDestroy()
     {
         AudioSource.PlayClipAtPoint(pop, transform.position, Settings.volume);
-        if (Pipe.bubbleToxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
+        if (PowerupSystem.toxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
     }
 }

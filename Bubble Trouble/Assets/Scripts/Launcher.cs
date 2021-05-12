@@ -5,10 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class Launcher : MonoBehaviour
 {
-    [SerializeField] public GameObject gameOverMenu;
+    public static Launcher instance;
 
+    [SerializeField] public GameObject gameOverMenu;
+    public Animator CrossFade;
+    public bool isLoading = false;
+
+    private void Awake()
+    {
+        instance = this;
+        FadeIn();
+    }
     public void LoadLevel(int level)
     {
+        StartCoroutine(Load(level));
+    }
+
+    public IEnumerator Load(int level)
+    {
+        FadeOut();
+        yield return new WaitUntil(() => isLoading == true);
         SceneManager.LoadScene(level);
     }
 
@@ -16,8 +32,6 @@ public class Launcher : MonoBehaviour
     {
         Application.Quit();
     }
-
-    
     public void OpenMenu(GameObject menuToOpen)
     {
         menuToOpen.SetActive(true);   
@@ -26,7 +40,6 @@ public class Launcher : MonoBehaviour
     {
         menuToClose.SetActive(false);
     }
-
     public void PauseGame(bool state)
     {
         if (state)
@@ -38,10 +51,17 @@ public class Launcher : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-
     public void GameOver()
     {
         OpenMenu(gameOverMenu);
         gameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
+    }
+    public void FadeOut()
+    {
+        CrossFade.SetTrigger("FadeOut");
+    }
+    public void FadeIn()
+    {
+        CrossFade.SetTrigger("FadeIn");
     }
 }

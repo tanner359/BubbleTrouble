@@ -125,11 +125,284 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tail
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 4564
+        width: 823
+        height: 754
+      alignment: 9
+      pivot: {x: 0.95865303, y: 0.58118224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4915b73cc3404cc00800000000000000
+      internalID: 919864882914611604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dorsal
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 4939
+        width: 403
+        height: 247
+      alignment: 9
+      pivot: {x: 0.583089, y: 0.11297089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952b2327122e55590800000000000000
+      internalID: -7685988555760160167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pectoral
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 4855
+        width: 372
+        height: 413
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fc447ff87915ce0800000000000000
+      internalID: -1418185763060396177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pelvic
+      rect:
+        serializedVersion: 2
+        x: 3644
+        y: 5060
+        width: 174
+        height: 95
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2134708e58c142c10800000000000000
+      internalID: 2027777093672583954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_00
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 3708
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6bd689a0546cac0800000000000000
+      internalID: -3835302120850082125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_01
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 3725
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2431963d0ce227b60800000000000000
+      internalID: 7742302115118781250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_02
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 2799
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa4478f600c54630800000000000000
+      internalID: 3910742987611851424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_03
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 2799
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3b2dec0fb71d630800000000000000
+      internalID: 3950074622372918214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_04
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1800
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e2d59f63764e180800000000000000
+      internalID: -9087024662317289828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_05
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 1800
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446e1853240ceb10800000000000000
+      internalID: 2011987683376522304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_06
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 944
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079eba28d7f371740800000000000000
+      internalID: 5122632909452994928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_07
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 944
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e5657f4b31e4010800000000000000
+      internalID: 1174898220754951728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body_08
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 191
+        width: 1667
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54d1cc46f5d7fa60800000000000000
+      internalID: 7707864541094335581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e30d1d4c0f721634f89d8dd1194c5b81
     internalID: 0
     vertices: []
     indices: 
