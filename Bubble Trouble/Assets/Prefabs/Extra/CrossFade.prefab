@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5628024964651583877}
   - component: {fileID: 5628024964651583876}
-  - component: {fileID: 425372961124929637}
+  - component: {fileID: 7601167655009680619}
   m_Layer: 5
   m_Name: CrossFade
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &425372961124929637
+--- !u!114 &7601167655009680619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
