@@ -9,12 +9,16 @@ public class Launcher : MonoBehaviour
 
     [SerializeField] public GameObject gameOverMenu;
     public Animator CrossFade;
-    public bool isLoading = false;
+    public Animator BubbleFade;
+    public bool completeLoad = false;
 
     private void Awake()
+    {       
+        instance = this;       
+    }
+    private void Start()
     {
-        instance = this;
-        FadeIn();
+        BubbleFade = GameObject.Find("BubbleFade").GetComponent<Animator>();        
     }
     public void LoadLevel(int level)
     {
@@ -24,8 +28,36 @@ public class Launcher : MonoBehaviour
     public IEnumerator Load(int level)
     {
         FadeOut();
-        yield return new WaitUntil(() => isLoading == true);
-        SceneManager.LoadScene(level);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+        asyncLoad.allowSceneActivation = false;
+        while (!completeLoad)
+        {
+            yield return null;
+        }             
+        FadeIn();
+        yield return new WaitForSeconds(1f);
+        asyncLoad.allowSceneActivation = true;
+        completeLoad = false;
+    }
+
+    //public IEnumerator LoadAsyncScene(int level)
+    //{
+    //    // The Application loads the Scene in the background as the current Scene runs.
+    //    // This is particularly good for creating loading screens.
+    //    // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+    //    // a sceneBuildIndex of 1 as shown in Build Settings.
+
+    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
+    //    // Wait until the asynchronous scene fully loads
+    //    while (!asyncLoad.isDone)
+    //    {
+    //        yield return null;
+    //    }
+    //}
+
+    public void RestartLevel()
+    {
+        LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()
@@ -59,9 +91,11 @@ public class Launcher : MonoBehaviour
     public void FadeOut()
     {
         CrossFade.SetTrigger("FadeOut");
+        BubbleFade.SetTrigger("FadeOut");
     }
     public void FadeIn()
     {
         CrossFade.SetTrigger("FadeIn");
+        BubbleFade.SetTrigger("FadeIn");
     }
 }

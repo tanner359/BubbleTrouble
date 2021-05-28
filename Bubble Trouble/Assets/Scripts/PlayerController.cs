@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     //public float movementSpeed;
-    public Launcher launcher;
     public ContactFilter2D incomingDamageFilter;
     List<Collider2D> incomingColliders = new List<Collider2D>();
 
@@ -59,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
         if (Physics2D.OverlapCollider(GetComponent<BoxCollider2D>(), incomingDamageFilter, incomingColliders) > 0 && !Dead)
         {
-            launcher.GameOver();
+            Launcher.instance.GameOver();
             Dead = true;
             animator.enabled = false;
             for(int i = 0; i < transform.childCount; i++)
