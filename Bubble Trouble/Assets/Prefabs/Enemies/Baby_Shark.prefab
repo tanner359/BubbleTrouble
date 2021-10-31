@@ -42,6 +42,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -124,6 +125,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -206,6 +208,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -294,6 +297,7 @@ GameObject:
   - component: {fileID: 6916650876818640468}
   - component: {fileID: 1181005857043059107}
   - component: {fileID: 2115994915994605594}
+  - component: {fileID: 4825164115876048570}
   m_Layer: 7
   m_Name: Baby_Shark
   m_TagString: Enemy
@@ -367,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6429802167071461287}
   movementSpeed: 5
-  Health: 2
+  Health: 200
   Bottom_L: {x: -19.79945, y: -19.056973}
   Top_L: {x: -19.634453, y: -3.8773944}
   Bottom_R: {x: 19.799454, y: -19.386965}
@@ -392,6 +396,7 @@ MonoBehaviour:
   follow: 0
   triggerPosition: 1
   player: {fileID: 0}
+  healthFlash: 0
 --- !u!95 &2115994915994605594
 Animator:
   serializedVersion: 3
@@ -411,6 +416,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4825164115876048570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452188757866876649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ab6671e97434145abe79cfd5b09da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1181005857043059107}
+  t: 0
 --- !u!1 &4505532136836110320
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +472,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -535,6 +555,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

@@ -8,6 +8,9 @@ public class Launcher : MonoBehaviour
     public static Launcher instance;
 
     [SerializeField] public GameObject gameOverMenu;
+    [SerializeField] public GameObject optionsMenu;
+
+
     public Animator CrossFade;
     public Animator BubbleFade;
     public bool completeLoad = false;
@@ -22,6 +25,7 @@ public class Launcher : MonoBehaviour
     }
     public void LoadLevel(int level)
     {
+        Time.timeScale = 1;
         StartCoroutine(Load(level));
     }
 
@@ -40,23 +44,9 @@ public class Launcher : MonoBehaviour
         completeLoad = false;
     }
 
-    //public IEnumerator LoadAsyncScene(int level)
-    //{
-    //    // The Application loads the Scene in the background as the current Scene runs.
-    //    // This is particularly good for creating loading screens.
-    //    // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
-    //    // a sceneBuildIndex of 1 as shown in Build Settings.
-
-    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level);
-    //    // Wait until the asynchronous scene fully loads
-    //    while (!asyncLoad.isDone)
-    //    {
-    //        yield return null;
-    //    }
-    //}
-
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -81,6 +71,22 @@ public class Launcher : MonoBehaviour
         else
         {
             Time.timeScale = 1;
+        }
+    }
+
+    public void ToggleOptions()
+    {
+
+        Debug.Log("toggle options");
+        if (optionsMenu.activeSelf.Equals(true))
+        {
+            optionsMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            optionsMenu.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     public void GameOver()

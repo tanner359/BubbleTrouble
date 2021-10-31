@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     //public float movementSpeed;
     public ContactFilter2D incomingDamageFilter;
     List<Collider2D> incomingColliders = new List<Collider2D>();
+    public enum Claw { Right, Left };
 
     public AudioSource hitsound;
 
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
     }
 
-    bool Dead {get;set;}
+    bool Dead { get; set; }
 
     Vector3 tilt;
     Touch touch;
@@ -29,18 +30,23 @@ public class PlayerController : MonoBehaviour
         if (!Dead)
         {
             tilt = Input.acceleration;
-            Walk(tilt.x);
+            if(Input.GetJoystickNames().Length == 0)
+            {
+                Walk(tilt.x);
+            }
+            else
+            {
+                Walk(Input.GetAxis("Horizontal"));
+            }
         }
     }
 
     Vector2 touchPos;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("Change Light");
-        }
+        #region Controls
 
+        #region Touch
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
@@ -51,17 +57,36 @@ public class PlayerController : MonoBehaviour
                 default:
                     break;
                 case TouchPhase.Began:
-                    Swing();
+                    if (touchPos.x >= 0){Swing(Claw.Right);}
+                    else if (touchPos.x < 0){Swing(Claw.Left);}
                     break;
             }
-        }       
+        }
+        #endregion
+
+        #region Controller
+        if (Input.GetAxis("Attack Left") != 0)
+        {
+            Swing(Claw.Left);
+        }
+        if (Input.GetAxis("Attack Right") != 0)
+        {
+            Swing(Claw.Right);
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
+        {
+            Launcher.instance.ToggleOptions();
+        }
+
+        #endregion
+        #endregion
 
         if (Physics2D.OverlapCollider(GetComponent<BoxCollider2D>(), incomingDamageFilter, incomingColliders) > 0 && !Dead)
         {
             Launcher.instance.GameOver();
             Dead = true;
             animator.enabled = false;
-            for(int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.AddComponent<BoxCollider2D>();
                 Rigidbody2D rb = transform.GetChild(i).gameObject.AddComponent<Rigidbody2D>();
@@ -71,20 +96,21 @@ public class PlayerController : MonoBehaviour
     }
     bool attack = false;
     public void EnableAttack() { attack = true; }
-    public void DisableAttack() { attack = false; }
-
-    public void Swing()
+    public void DisableAttack() { attack = false; }   
+    public bool IsAttacking() { return attack; }
+    public void Swing(Claw claw)
     {
-        if(touchPos.x >= 0)
+        switch (claw)
         {
-            animator.SetTrigger("SwingRight");
-        }
-        else if(touchPos.x < 0)
-        {
-            animator.SetTrigger("SwingLeft");
-        }
-    }
+            case Claw.Left:
+                animator.SetTrigger("SwingLeft");
+                break;
 
+            case Claw.Right:
+                animator.SetTrigger("SwingRight");
+                break;
+        }      
+    }
     public void Walk(float direction)
     {
         animator.SetFloat("MovementSpeed", Mathf.Abs(direction * 1.5f));
@@ -110,7 +136,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bubble") && attack)
         {
-            Debug.Log("Bubble hit");
             collision.GetComponent<Bubble>().SetBubbleHit(true);
             Rigidbody2D bubbleRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Vector3 direction = -(transform.position - bubbleRB.transform.position).normalized;

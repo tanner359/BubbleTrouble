@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Menu.unity
     guid: 81097bebc0a54e4429767bbaaa28ac01
   - enabled: 1
+    path: Assets/Scenes/Menus/PlaySelect.unity
+    guid: 9d6d22c14389f2241a2d9f33708b9805
+  - enabled: 1
     path: Assets/Scenes/Menus/WorldSelect.unity
     guid: abe9e2ff82199bf4e94f8e22921e0677
+  - enabled: 1
+    path: Assets/Scenes/Menus/EndlessSelect.unity
+    guid: 4999526e4023dee48811e4a4d0a4a552
+  - enabled: 1
+    path: Assets/Scenes/Menus/Customize.unity
+    guid: 4df9e3aa3f5ea994484225e5ca73f4b1
   - enabled: 1
     path: Assets/Scenes/Worlds/World_01.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

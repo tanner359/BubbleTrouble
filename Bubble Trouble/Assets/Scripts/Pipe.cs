@@ -27,7 +27,6 @@ public class Pipe : MonoBehaviour
     {
         yield return new WaitForSeconds(spawnDelay);
         animator.SetTrigger("ShootBubble");
-        if (PowerupSystem.spawnPwr == true) spawnDelay = 1f; else spawnDelay = 4f;
         StartCoroutine(SpawnDelay(spawnDelay));
     }
 }

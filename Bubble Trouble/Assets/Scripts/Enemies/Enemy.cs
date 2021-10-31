@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     [Header("Stats")]
     public float movementSpeed = 1;
     public int Health = 1;
+    int tempHealth;
    
     [Space(5)]
     [Header("Boundry Modifiers")]
@@ -56,6 +57,8 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        tempHealth = Health;
+
         BL_Offset = Bottom_L;
         TL_Offset = Top_L;
         BR_Offset = Bottom_R;
@@ -77,7 +80,6 @@ public class Enemy : MonoBehaviour
             StartCoroutine(MoveToBounds());
         }          
     }
-
     public void UpdateValues()
     {
         //updates the values in the editor DO NOT REMOVE THIS!!
@@ -115,7 +117,22 @@ public class Enemy : MonoBehaviour
         if (rotate)
         {
             SetDirection();
-        }     
+        }
+
+        if (Health != tempHealth)
+        {
+            if (healthFlash == false)
+            {
+                StartCoroutine(DamageFlash(renderers, renderers[0].color, Color.red));
+            }
+            tempHealth = Health;
+        }
+        else if(Health <= 0)
+        {
+            PowerupSystem.SpawnRandom(transform.position);
+            Spawn.instance.numEnemiesSpawned--;
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -224,7 +241,6 @@ public class Enemy : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y), Mathf.Abs(transform.localScale.z));
         }
     }
-
     public float RandomTime(float MIN, float MAX)
     {
         return Random.Range(MIN, MAX);
@@ -278,29 +294,6 @@ public class Enemy : MonoBehaviour
         return new Vector2(final_X, final_Y);
     }
     #endregion
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bubble") || collision.CompareTag("Explosion"))
-        {
-            if (!collision.gameObject.GetComponent<Bubble>().wasHit) { return; }
-            if (collision.CompareTag("Bubble") && !PowerupSystem.piercePwr) Destroy(collision.gameObject);
-            Health--;
-            if(Health != 0)
-            {
-                if (healthFlash == false)
-                {
-                    StartCoroutine(DamageFlash(renderers, renderers[0].color, Color.red));
-                }
-            }
-            else
-            {
-                PowerupSpawning.SpawnRandom(transform.position);
-                Spawn.instance.numEnemiesSpawned--;
-                Destroy(gameObject);
-            }            
-        }
-    }
 
     public bool healthFlash;
     public IEnumerator DamageFlash(SpriteRenderer[] renderers, Color origin, Color change)

@@ -26,7 +26,7 @@ TagManager:
   - Enemies
   - Projectiles
   - Barriers
-  - 
+  - Post Processing
   - 
   - 
   - 
@@ -69,4 +69,7 @@ TagManager:
     locked: 0
   - name: Particle
     uniqueID: 3621699595
+    locked: 0
+  - name: UI
+    uniqueID: 2236468815
     locked: 0

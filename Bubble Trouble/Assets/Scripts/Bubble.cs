@@ -4,27 +4,22 @@ using UnityEngine;
 using System.IO;
 
 public class Bubble : MonoBehaviour
-{ 
+{
     public Animator animator;
     public Rigidbody2D rb;
     public bool wasHit = false;
-    public AudioClip pop;
-    public Sprite toxicBubble;
-    public static GameObject explosion;
-    SpriteRenderer sr;
+    public AudioClip popSound;
 
-    private void Awake()
+    Stats stats;
+
+    private void Start()
     {
-        if (PowerupSystem.toxicPwr) { sr = GetComponentInChildren<SpriteRenderer>(); sr.sprite = toxicBubble; }
+        stats = gameObject.GetComponent<Stats>();
     }
-
     public bool WasBubbleHit(){return wasHit;}
     public void SetBubbleHit(bool state) { wasHit = state; }
-
-    private void Start() { explosion = Resources.Load<GameObject>("Toxic Explosion"); }
-
     private void OnCollisionEnter2D(Collision2D collision)
-    {                
+    {
         float yDiff = Mathf.Abs(Mathf.Abs(transform.position.y) - Mathf.Abs(collision.GetContact(0).point.y));
         float xDiff = Mathf.Abs(Mathf.Abs(transform.position.x) - Mathf.Abs(collision.GetContact(0).point.x));
 
@@ -42,9 +37,13 @@ public class Bubble : MonoBehaviour
             animator.SetTrigger("Squish_H");       
         }       
     } 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Combat.DamageTarget(collision.gameObject.GetComponent<Enemy>(), stats.HitDamage);
+        }
+
         float yDiff = Mathf.Abs(Mathf.Abs(transform.position.y) - Mathf.Abs(collision.transform.position.y));
         float xDiff = Mathf.Abs(Mathf.Abs(transform.position.x) - Mathf.Abs(collision.transform.position.x));
 
@@ -57,10 +56,8 @@ public class Bubble : MonoBehaviour
             animator.SetTrigger("Squish_H");
         }
     }
-
     private void OnDestroy()
     {
-        AudioSource.PlayClipAtPoint(pop, transform.position, Settings.volume);
-        if (PowerupSystem.toxicPwr) Instantiate(explosion, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(popSound, transform.position, Settings.volume);
     }
 }

@@ -5,69 +5,43 @@ using UnityEngine.UI;
 
 public static class PowerupSystem
 {
-    public static bool spawnPwr = false;
-    public static bool toxicPwr = false;
-    public static bool piercePwr = false;
+    public static float spawnChance = 0.05f; // base: 5% chance (+2%)
+    public static GameObject[] powerups = Resources.LoadAll<GameObject>("Powerups");
 
-    public static Transform cooldownShelf;
-    public static GameObject spawnUI = Resources.Load<GameObject>("Cooldown UI/SpawnCooldownUI");
-    public static GameObject toxicUI = Resources.Load<GameObject>("Cooldown UI/ToxicCooldownUI");
-    public static GameObject speedUI = Resources.Load<GameObject>("Cooldown UI/SpeedCooldownUI");
-    public static GameObject pierceUI = Resources.Load<GameObject>("Cooldown UI/PierceCooldownUI");
+    public static void SpawnRandom(Vector2 pos)
+    {
+        float i = Random.Range(0f, 1f);
+        if (i <= spawnChance)
+        {
+            Object.Instantiate(powerups[Random.Range(0, powerups.Length)], pos, Quaternion.identity);
 
-    public static IEnumerator StartPowerup(Powerup.Type type)
+            spawnChance = 0.05f;
+        }
+        else { spawnChance += 0.02f; }
+    }
+
+    public static IEnumerator ActivatePowerup(Powerup.Type type)
     {
         switch (type)
         {
             case Powerup.Type.Toxic:
-                if (toxicPwr) break;
-                GameObject toxicIcon = Object.Instantiate(toxicUI, cooldownShelf);
-                toxicIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/ToxicPwrupIcon");
-                toxicPwr = true;
-                Debug.Log("Toxic effects started");
-                yield return new WaitForSeconds(10f);
-                toxicPwr = false;
-                Debug.Log("Toxic effects ended");
+                
                 break;
             case Powerup.Type.Speed:
-                if (PlayerController.instance.hitForce > 51f) break;
-                GameObject speedIcon = Object.Instantiate(speedUI, cooldownShelf);
-                speedIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/SpeedPwrupIcon");
-                PlayerController.instance.hitForce += (PlayerController.instance.hitForce * 2f);
-                Debug.Log("Speed effects started");
-                yield return new WaitForSeconds(10f);
-                PlayerController.instance.hitForce = 50f;
-                Debug.Log("Speed effects ended");
+                
                 break;
             case Powerup.Type.Spawn:
-                if (spawnPwr) break;
-                spawnPwr = true;
-                GameObject spawnIcon = Object.Instantiate(spawnUI, cooldownShelf);
-                spawnIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/SpawnPwrupIcon");
-                Debug.Log("Spawn effects started");
-                yield return new WaitForSeconds(10f);
-                spawnPwr = false;
-                Debug.Log("Spawn effects ended");
+                
                 break;
             case Powerup.Type.Pierce:
-                if (piercePwr) break;
-                piercePwr = true;
-                GameObject pierceIcon = Object.Instantiate(pierceUI, cooldownShelf);
-                pierceIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("PowerupIcons/PiercePwrupIcon");
-                Debug.Log("Pierce effects started");
-                yield return new WaitForSeconds(10f);
-                piercePwr = false;
-                Debug.Log("Pierce effects ended");
+                
                 break;
         }
+        return null;
     }
 
-    public static void PowerupClear()
+    public static void ClearEffects()
     {
-        toxicPwr = false; PlayerController.instance.hitForce = 50f; spawnPwr = false; piercePwr = false;
-        //if (spawnUI.activeSelf) Object.Destroy(spawnUI);
-        //if (toxicUI.activeSelf) Object.Destroy(toxicUI);
-        //if (speedUI.activeSelf) Object.Destroy(speedUI);
-        //if (pierceUI.activeSelf) Object.Destroy(pierceUI);
+        // clear current power up effects
     }
 }

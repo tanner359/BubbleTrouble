@@ -26,9 +26,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        PowerupSystem.cooldownShelf = GameObject.FindGameObjectWithTag("CooldownShelf").transform;
-        PowerupSystem.PowerupClear();
-
         roundAnim = roundBanner.GetComponent<Animator>();
         roundImage = roundBanner.transform.Find("WaveText").GetComponent<Image>();
 
@@ -43,7 +40,7 @@ public class GameManager : MonoBehaviour
     public void WorldCleared()
     {
         levelCleared = true;
-        PowerupSystem.PowerupClear();
+        PowerupSystem.ClearEffects();
         StartCoroutine(ExitScene());
     }
     public IEnumerator ActivateWaveBanner()
